@@ -12,7 +12,12 @@
   - Fabian Ramírez Pinto
 
 ### Asignación de roles:
-![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/roles%20proy%20labinfo.png)
+|     Nombre    |     Rol         |
+|--------------|------------- |
+|Diego Alfonso Prieto	|Product Owner    |
+|Eduard Arias	|Scrum Master    |
+|Fabian Ramírez|Developer   |
+|David Coronado |Developer   |
  
  # Descripción del Producto
   #### Descripción General
