@@ -2,7 +2,7 @@
 ## ***Eci-Horarios***
 
   - **Periodo Académico**: 2021-1
-  - **curso**: Arquitectura de Software
+  - **Curso**: Arquitectura de Software
   - **Profesor**: Diego Alfonso Prieto Torres
   
   
