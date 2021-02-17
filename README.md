@@ -37,3 +37,69 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b62c449e43f24a86803f524a67d373ea)](https://app.codacy.com/gh/Software-Development-Industries/ECI-Horarios/dashboard)
 
+
+### ***SPRINTS y release-burndown chart***
+
+### **SPRINT 1**
+
+Para este Sprint se usuaron las siguientes historias de usuario propuestas, con el fin de comenzar la estructuracion del proyecto:
+
+- 
+- 
+- 
+- 
+- 
+
+
+Descripcion:
+#### ***Burdown Chart***
+
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%201%20Burdown%20chart.jpg)
+
+#### ***Backlog***
+
+### **SPRINT 2**
+
+Para este Sprint 2 se usuaron las siguientes historias de usuario propuestas, con el fin de reorganizar el proyecto y avanzarlo lo mas que se pudiera:
+
+- 
+- 
+- 
+- 
+- 
+
+
+Descripcion:
+
+#### ***Burdown Chart***
+
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%202%20burdown%20chart.jpg)
+
+#### ***Backlog***
+
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%202%20backlog.jpg)
+
+
+### **SPRINT 3**
+
+Para este Sprint 3 se usuaron las siguientes historias de usuario propuestas, con el fin de comenzar a culminar el proyecto lo mas pronto posible y avanzar en lo que se podia.:
+
+- 
+- 
+- 
+- 
+- 
+
+
+Descripcion:
+
+
+#### ***Burdown Chart***
+
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%203%20burdwn%20char.jpg)
+
+#### ***Backlog***
+
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Sprint%203%20backlog.jpg)
+
+
