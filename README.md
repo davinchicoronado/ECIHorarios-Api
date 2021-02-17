@@ -31,3 +31,9 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 
 ## CircleCI
 >[![CircleCI](https://circleci.com/gh/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI.svg?style=svg)](https://app.circleci.com/pipelines/github/Software-Development-Industries/ECI-Horarios)
+>
+
+## Codacy
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b62c449e43f24a86803f524a67d373ea)](https://www.codacy.com/manual/Fabimauri47/CVDS-Lab6-Grupo5/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Fabimauri47/CVDS-Lab6-Grupo5&amp;utm_campaign=Badge_Grade)
+
