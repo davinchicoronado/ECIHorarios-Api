@@ -7,7 +7,7 @@
   
   
 - **Integrantes**:
-  - duard Arias Rincón
+  - Eduard Arias Rincón
   - David Coronado Gómez
   - Fabian Ramírez Pinto
 
