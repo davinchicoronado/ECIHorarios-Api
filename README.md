@@ -35,5 +35,5 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 
 ## Codacy
 
-[![Codacy Badge](https://app.codacy.com/gh/Software-Development-Industries/ECI-Horarios/dashboard)](https://www.codacy.com/manual/Fabimauri47/CVDS-Lab6-Grupo5/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Fabimauri47/CVDS-Lab6-Grupo5&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b62c449e43f24a86803f524a67d373ea)](https://app.codacy.com/gh/Software-Development-Industries/ECI-Horarios/dashboard)
 
