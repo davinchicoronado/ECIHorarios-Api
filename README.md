@@ -30,4 +30,4 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 >[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://eci-horarios.herokuapp.com/)
 
 ## CircleCI
->[![CircleCI](https://circleci.com/gh/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI.svg?style=svg)](https://app.circleci.com/pipelines/github/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI)
+>[![CircleCI](https://circleci.com/gh/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI.svg?style=svg)](https://app.circleci.com/pipelines/github/Software-Development-Industries/ECI-Horarios)
