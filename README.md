@@ -52,9 +52,10 @@ Para este Sprint se usuaron las siguientes historias de usuario propuestas, con 
 
 
 Descripcion:
+
 #### ***Burdown Chart***
 
-![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%201%20Burdown%20chart.jpg)
+![Presione AQUI para ver el Burdown Chart](https://docs.google.com/spreadsheets/d/1E1AZcC1FeUuFACYtOT1bjsBhArqX-akQ/edit#gid=603465677)
 
 #### ***Backlog***
 
@@ -73,11 +74,11 @@ Descripcion:
 
 #### ***Burdown Chart***
 
-![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%202%20burdown%20chart.jpg)
+![texto cualquiera por si no carga la imagen]()
 
 #### ***Backlog***
 
-![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%202%20backlog.jpg)
+![texto cualquiera por si no carga la imagen]()
 
 
 ### **SPRINT 3**
@@ -96,10 +97,10 @@ Descripcion:
 
 #### ***Burdown Chart***
 
-![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%203%20burdwn%20char.jpg)
+![texto cualquiera por si no carga la imagen]()
 
 #### ***Backlog***
 
-![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Sprint%203%20backlog.jpg)
+![texto cualquiera por si no carga la imagen]()
 
 
