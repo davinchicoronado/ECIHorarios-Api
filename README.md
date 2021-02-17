@@ -55,7 +55,8 @@ Descripcion:
 
 #### ***Burdown Chart***
 
-![Presione AQUI para ver el Burdown Chart](https://docs.google.com/spreadsheets/d/1E1AZcC1FeUuFACYtOT1bjsBhArqX-akQ/edit#gid=603465677)
+ -[Presione Aqui para revisar documento](https://docs.google.com/spreadsheets/d/1E1AZcC1FeUuFACYtOT1bjsBhArqX-akQ/edit#gid=603465677)
+
 
 #### ***Backlog***
 
