@@ -31,7 +31,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 
 
 
-![texto cualquiera por si no carga la imagen]()
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/menu%20principal%20eci%20horarios.png)
 
 # HerokuApp
 >[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://eci-horarios.herokuapp.com/)
@@ -51,11 +51,12 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 
 Para este Sprint se usuaron las siguientes historias de usuario propuestas, con el fin de comenzar la estructuracion del proyecto:
 
-- 
-- 
-- 
-- 
-- 
+- Como: usuario de la universidad. Necesito: autenticarme ante el sistema satisfactoriamente. Para: poder realizar las diferentes labores que me permite el sistema, dependiendo    del rol con el que estoy registrado. Se debe usar una fuente de datos básica para la autenticación de los usuarios, donde se registre principalmente, el usuario, el rol,       estado y demás información necesaria. 
+- Como: estudiante de la universidad Quiero consultar las materias disponibles para poder realizar mi horario.
+- Como: administrador quiero poder agregar o quitar si es el caso, las materias que se dictaran por parte de la universidad para poder permitirle a los estudiantes consultar       estas.
+- Como: estudiante quiero poder preinscribir varios planes de distintas materias para tener la idea de lo que posiblemente voy a ver este semestre.
+- Como: estudiante quiero poder inscribir el plan que anteriormente grabé para seguir con mi curso académico.
+- Como estudiante quiero poder retirar una materia para poder seleccionar una que mas se adecué a mi horario.
 
 
 Descripcion:
@@ -67,48 +68,5 @@ Descripcion:
 
 #### ***Backlog***
 
-### **SPRINT 2**
-
-Para este Sprint 2 se usuaron las siguientes historias de usuario propuestas, con el fin de reorganizar el proyecto y avanzarlo lo mas que se pudiera:
-
-- 
-- 
-- 
-- 
-- 
-
-
-Descripcion:
-
-#### ***Burdown Chart***
-
-![texto cualquiera por si no carga la imagen]()
-
-#### ***Backlog***
-
-![texto cualquiera por si no carga la imagen]()
-
-
-### **SPRINT 3**
-
-Para este Sprint 3 se usuaron las siguientes historias de usuario propuestas, con el fin de comenzar a culminar el proyecto lo mas pronto posible y avanzar en lo que se podia.:
-
-- 
-- 
-- 
-- 
-- 
-
-
-Descripcion:
-
-
-#### ***Burdown Chart***
-
-![texto cualquiera por si no carga la imagen]()
-
-#### ***Backlog***
-
-![texto cualquiera por si no carga la imagen]()
 
 
