@@ -59,14 +59,17 @@ Para este Sprint se usuaron las siguientes historias de usuario propuestas, con 
 - Como estudiante quiero poder retirar una materia para poder seleccionar una que mas se adecué a mi horario.
 
 
-Descripcion:
-
 #### ***Burdown Chart***
 
- -[Presione Aqui para revisar documento](https://docs.google.com/spreadsheets/d/1E1AZcC1FeUuFACYtOT1bjsBhArqX-akQ/edit#gid=603465677)
+ -[Presione Aqui para revisar documento](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/burdown%20char%20eci%20horarios.png)
 
+## Arquitecura y Diseño
 
-#### ***Backlog***
+### Historias de Usuario
+
+* Acontinuacion se vera los diagramas de caso de uso definidos para este proyecto:
+    *   Consultas Operativas
+    *   Funciones
 
 
 
