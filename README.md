@@ -77,6 +77,9 @@ Para este Sprint se usuaron las siguientes historias de usuario propuestas, con 
     *   Funciones
         ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Funciones%20ECI-Horarios.png)
         
+### Diagrama de Clase
+
+    * ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Funciones%20ECI-Horarios.png)
         
 -[Presione Aqui para revisar documento](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/burdown%20char%20eci%20horarios.png)
 
