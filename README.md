@@ -60,7 +60,8 @@ Para este Sprint se usuaron las siguientes historias de usuario propuestas, con 
 
 
 #### ***Burdown Chart***
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-         Horarios/blob/master/design/FrontEnd/WireFrames/menu%20principal%20eci%20horarios.png)
+
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/burdown%20char%20eci%20horarios.png)
 
  
 ## Arquitecura y Diseño
