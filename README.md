@@ -69,12 +69,11 @@ Para este Sprint se usuaron las siguientes historias de usuario propuestas, con 
 
 * Acontinuacion se vera los diagramas de caso de uso definidos para este proyecto:
     *   Consultas Operativas
-       -[Presione Aqui para revisar documento](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Consultas%20Operativas%20ECI-horarios.png)
-
+       ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Consultas%20Operativas%20ECI-horarios.png)
     *   Funciones
-        -[Presione Aqui para revisar documento](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Funciones%20ECI-Horarios.png)
-
-
+        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Funciones%20ECI-Horarios.png)
+        
+        
 -[Presione Aqui para revisar documento](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/burdown%20char%20eci%20horarios.png)
 
 
