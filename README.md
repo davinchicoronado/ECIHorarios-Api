@@ -98,7 +98,7 @@ En total fueron 3 Sprint, y todo el grupo se puso de acuerdo para la asiganacion
 Mediante este enlace se podra acceder a la Herramienta Taiga y conocer el proceso del Proyecto. [Taiga Software Development Industries--ECI Horarios](https://tree.taiga.io/project/fabimauri47-eci-horarios/timeline).
 
 
-### ***SPRINTS y release-burndown chart***
+## ***SPRINTS y release-burndown chart***
 
 ### **SPRINT 1**
 
@@ -113,22 +113,22 @@ Para este Sprint se usuaron las siguientes historias de usuario propuestas, con 
 
 #### ***Burdown Chart***
 
-![texto cualquiera por si no carga la imagen]()
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Sprints/Sprint%201%20burdown%20chart.png)
 
 #### ***Backlog***
 
-![texto cualquiera por si no carga la imagen]()
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Sprints/Sprint%201%20BackLog.png)
 
 
 ### **SPRINT 2**
 
 Para este Sprint 2 se usuaron las siguientes historias de usuario propuestas, con el fin de reorganizar el proyecto y avanzarlo lo mas que se pudiera:
 
-- Corrección del Sprint 1
-- Reporte historico de novedades
-- Reporte de equipos.
-- Reporte de laboratorios.
-- Reporte de elementos
+- 
+- 
+- 
+- 
+- 
 
 Se presento grandes problemas en el Sprint 1, pues tuvimos un problema de integración del sistema, específicamente en el BEAN, lo que causo muchos retrasos tanto en el Sprint 1, como en el sprint 2. Es por eso que se decidió hacer borrón y cuenta nueva, y volver a implementar desde cero, esto con el fin de que se estructurara mejor el proyecto y se mitigaran los errores. Esto sirvió y permitió solución de errores y un avance circunstancial en el proyecto.
 
@@ -136,11 +136,11 @@ Se presento grandes problemas en el Sprint 1, pues tuvimos un problema de integr
 
 #### ***Burdown Chart***
 
-![texto cualquiera por si no carga la imagen]()
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Sprints/Sprint%202%20BurdownChart.png)
 
 #### ***Backlog***
 
-![texto cualquiera por si no carga la imagen]()
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Sprints/Sprint%202%20Backlog.png)
 
 
 ### **SPRINT 3**
