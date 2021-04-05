@@ -124,13 +124,16 @@ Para este Sprint se usuaron las siguientes historias de usuario propuestas, con 
 
 Para este Sprint 2 se usuaron las siguientes historias de usuario propuestas, con el fin de reorganizar el proyecto y avanzarlo lo mas que se pudiera:
 
-- 
-- 
-- 
-- 
-- 
+- Arquitectura Frontend
+- Arquitectura Backend
+- Despliegue Heroku
+- Avance 2 repositorio GitHub
+- Manual de uso
+- Completitud Funcional
+- Análisis Estático: Código y Pruebas
+- Realización Presentación Segunda Entrega
 
-Se presento grandes problemas en el Sprint 1, pues tuvimos un problema de integración del sistema, específicamente en el BEAN, lo que causo muchos retrasos tanto en el Sprint 1, como en el sprint 2. Es por eso que se decidió hacer borrón y cuenta nueva, y volver a implementar desde cero, esto con el fin de que se estructurara mejor el proyecto y se mitigaran los errores. Esto sirvió y permitió solución de errores y un avance circunstancial en el proyecto.
+Se presento un avance aceptable para el Sprint 1, en donde se pudo ver la definición del proyecto y un bosquejo de como serían las funciones. para el Sprint 2, se presentó un avance tardío para el proyecto, ya que no se pudo realizar una integración completa del proyecto, debido a problemas con la coordinación del trabajo y falta de trabajo por dos de sus integrantes del grupo, lo esperado para este Sprint 2 es que hubieran cosas ya funcionando, mas solo una persona trabajando, no permite que se realice todo a tiempo y bien implementado. El avance para este Sprint 2 es nulo y muy poco a lo requerido para esta entrega, como lo podemos ver en el burdown chart y backlog.
 
 
 
