@@ -118,7 +118,7 @@ La planeación de los sprint se realizó en la primera reunión oficial de comie
 En total fueron 3 Sprint, y todo el grupo se puso de acuerdo para la asiganacion de tareas y cuáles de ellas se deberían hacer primero. Estableciendo tareas que se deberían realizar antes y que no saldrían si no se hicieran unas antes. Se hizo la utilizacion de controlador de versiones de GitHub para verificar el progreso del proyecto y de cada uno de los estudiantes, asi como el uso de la herramienta Taiga, para el control de Sprints y de tareas.
 
 
-## **Taiga**
+## **TAIGA**
 
 Mediante este enlace se podra acceder a la Herramienta Taiga y conocer el proceso del Proyecto: 
 
