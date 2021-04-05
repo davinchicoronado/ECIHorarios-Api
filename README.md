@@ -76,6 +76,28 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 
 ## Funcionalidades mas Importantes
 
+* Se contara con dos usuarios, los cuales contaran con un servicio para el manejo de los servicios, como lo podemos ver aca:
+
+    ![Funciones admin](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Login%20Sistemas%20Horario-ECI.png)
+
+* El estudiante de la ECI podra:
+
+    * Consultar Materias disponibles.
+    * Realizar una Pre-inscripción de materias.
+    * Realizar una Inscripción de materias.
+    * Agregar/ Quitar Materias.
+
+    ![Funciones estudiante](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/menu%20funciones%20estudiante.png)
+
+* El administrador de la ECI podra:
+
+    * Agregar/ Quitar Materia.
+    * Materias Inscritas.
+    * Estadisticas.
+    * Modificación Grupos.
+
+    ![Funciones admin](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Funciones%20Admin.png)
+
 
 # **Descripción del proceso**:
 
@@ -171,8 +193,4 @@ Para este Sprint 3 se comenzaron a ver los rezagos de los sprint anteriores, .
 
  ## **Tecnologías Utilizadas**
 
-- **Prime Faces(FRONT)**: Fue la librería utilizada para todos los componentes relacionados con el Front-End de la plataforma. Esta fue utilizada ya que es una librería ligera y que esta encapsulada en un único JAR, el que no requiere que se haga instalación de terceros para que esta sea puesta en marcha.
-
-- **Guice(BACK)**: Es el framework utilizado para la inyección de dependencias en Google Guice, permitiendo integrar aplicativos de Java ya hechos.
-
-- **PostgresSQL**: Fue nuestro Principal y único servidor de base de datos usado para el proyecto, pues fue utilizado para todo el manejo de datos he información como tal, haciendo utilización de herencias , tipos de datos, funciones, restricciones y reglas de integridad útiles para el manejo de equipos y elementos del laboratorio de informática.       
+       
