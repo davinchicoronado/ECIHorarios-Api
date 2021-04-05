@@ -23,7 +23,10 @@
  
   ## Descripción General
  
-Durante el transcurso de estudio en la Escuela Colombiana de Ingeniería hemos podido evidenciar las deficiencias que tiene la plataforma de horarios de la universidad, debido a que no facilita la vida de los estudiantes con herramientas fáciles de usar, agiles y concretas, si no que dificultan la armada de horarios de los estudiantes, hasta a un punto en que la plataforma no soporta el flujo de estudiantes y se cae. El problema es que no existen herramientas fáciles de usar y rápidas para preinscribir y inscribir horarios, dificultando así la vida de los estudiantes y tener que hacer muchas operaciones para para poder armar su horario de forma correcta, es por eso que se crea *Sistemas Horario Eci* para facilitar la vida de los estudiantes de la Escuela Colombiana De Ingeniería Julio Garavito, a un punto en que van poder armar sus horarios de la forma más fácil y rápida, teniendo un horario al gusto y de acuerdo a los requerimientos que necesite cada estudiante cada semestre.
+Es un herramienta desarrollada por el grupo de desarrolladores “Software Development Industries” la cual se encarga de mejorar el servicio que presta la universidad para la asignación y creación de horarios para la escuela colombiana de ingeniería. Para ello se planteó y creo una plataforma innovadora que cumplirá con los requerimientos de los estudiantes y solucionará las falencias de la plataforma actual usada, para ello se creo un aplicativo web que permitirá hacer uso de varios usuarios para cumplir con los requerimientos para realizar horarios. 
+
+La plataforma esta planteada como una herramienta nueva para realizar horario, la cual tendrá como plus la planeación de varios planes de horario de preinscripción, con la opción de poderlos inscribir apenas el turno de inscripción de horarios este disponible, para ello contara con opciones visuales que le permitirán establecer cuales de las opciones de planes se le acomodan acorde al estado actual de inscripción. 
+
 
 ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/menu%20principal%20eci%20horarios.png)
 
@@ -75,10 +78,77 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 ## **Manual de Usuario**
 
 [Presione Aqui para revisar El Manual de Usuario](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Manual%20de%20Usuario%20Software%20DEV%20IND--ECI%20Horarios.pdf)
+![texto cualquiera por si no carga la imagen]()
 
+  ### 1. **Acceso al sitio web**
+  - Ingrese al navegador de preferencia y escriba en la barra de direcciones el siguiente URL de acceso:
+      https://eci-horarios.herokuapp.com/ 
+  
+  ### 2.	**Inicio de Sesión**
+  - Para el inicio de sesión, en la pagina principal debemos irnos a la esquina superior derecha, en donde encontraremos un botón LOGIN. 
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/menu%20principal%20eci%20horarios.png)
+  
+  - Al dar clic en el botón, nos redirigirá al menú de acceso, en donde nos solicitara en los espacios en blanco un Correo y una contraseña, al ingresar dichos datos procedemos a darle INGRESAR.
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Login%20Sistemas%20Horario-ECI.png)
+  
+  - •	Existen dos tipos de usuario llamados:
+        - Administrador
+        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Menu%20login%20Admin.png)
+        - Estudiante
+        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Menu%20login%20EST.png)
 
+  
+  ### 3. **Menú de Adminsitrador**
+  - •	Al presionar al ingresar al menú de administrador podremos acceder a estas diferentes opciones:
+  1. Agregar/ Quitar Materia.
+  2. Materias Inscritas
+  3. Estadísticas
+  4. Modificación Grupos.
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Funciones%20Admin.png)
 
-
+  ### 4. **Menú de Estudiante**
+  
+  - •	Al presionar al ingresar al menú de Estudiante podremos acceder a estas diferentes opciones:
+  1. Consultar Materias disponibles.
+  2. Realizar una Preinscripción de materias.
+  3. Realizar una Inscripción de materias.
+  4. Agregar/ Quitar Materias.
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/menu%20funciones%20estudiante.png)
+  
+  ### 5. **Pre-Inscripción Materias**
+  
+  - •	En cada una de ellas podremos ver las opciones de plan de horario que hemos creado anteriormente.
+  
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Menu%20Pre-Inscripcion.png)
+  
+  ### 6. **inscripción de Materias**
+  
+  - •	Al presionar el botón de INSCRIPCION, podremos visualizar nuestras opciones de horarios que hemos creado anteriormente e indicarnos cual se nos acomoda más. 
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/menu%20inscripcion%20horarios.png)
+  
+  
+  ### 7. **Agregar/Quitar Materias**
+  
+  - •	AL presionar el botón de Agregar/Quitar Materia podremos agregar materias que vayamos a cursar en el periodo académico.
+  - •	En ella encontraremos cuatro tipos de opciones:
+  
+  1. Agregar
+  2. Quitar
+  3. Detalles
+  4. Actualizar
+  
+  - •	En donde se podrá visualizar las materias que vamos a inscribir para ese semestre. 
+  
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Menu%20Agregar--Quitar%20Materia.png)
+  
+  
 
 ## Funcionalidades mas Importantes
 
