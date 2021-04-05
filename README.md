@@ -51,20 +51,24 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 ## **Arquitecura y Diseño**
 
 ### Diagrama de Clase
-
 [Presione Aqui para revisar El Diagrama De Clases](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/app/ECI_Horarios.asta)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Diagramas/ECI_Horarios%20Diagrama%20clases.png)
 
-### Diagrama de Entidad relación
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/tree/master/design/CasosDeUso)
+### Diagrama de Entidad Relación
+[Presione Aqui para revisar El Diagrama De Entidad Relación](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/CasosDeUso/ProyectCasosDeUso.asta)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Diagramas/Funciones.png)
 
-### Diagrama de despliegue
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/backend/ECI_Horarios.asta)
+### Diagrama de Despliegue
+[Presione Aqui para revisar El Diagrama De Despliegue](https://github.com/Software-Development-Industries/ECI-Horarios/tree/master/design/app)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Diagramas/ECI_Horarios%20Diagrama%20clases.png)
 
-### Diagrama de casos de uso
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/CasosDeUso/ProyectCasosDeUso.asta)
+### Diagrama de Casos de Uso
+[Presione Aqui para revisar El Diagrama De Casos de usos](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/CasosDeUso/ProyectCasosDeUso.asta)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Diagramas/Consultas%20Operativas.png)
 
-### Diagrama de componentes
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/tree/master/design/FrontEnd/WireFrames)
+### Diagrama de Componentes
+[Presione Aqui para revisar El Diagrama De Componentes](https://github.com/Software-Development-Industries/ECI-Horarios/tree/master/design/FrontEnd/WireFrames)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/menu%20inscripcion%20horarios.png)
 
 
 
