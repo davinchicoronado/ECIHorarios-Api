@@ -5,7 +5,7 @@
  */
 package edu.eci.ecihorarios.persistence.stub;
 
-import edu.eci.ecihorarios.model.bean.LoginUser;
+
 import java.util.HashMap;
 import org.springframework.stereotype.Service;
 
@@ -21,20 +21,20 @@ public class PersistenceManagerStub {
     public PersistenceManagerStub(){
         passwords.put("admin","admin");
 
+        
     }
-    
-    public LoginUser checkLogin(String username, String password){
+
+    public boolean isLogin(String username, String password){
         
         if(passwords.containsKey(username)){
             if(passwords.get(username).equals(password)){
-                return new LoginUser(true);
+                return true;
             }
             else{
-                return new LoginUser(false);
+                return false;
             }
         }
-        
-        return new LoginUser(false);
+        return false;
     }
     
     

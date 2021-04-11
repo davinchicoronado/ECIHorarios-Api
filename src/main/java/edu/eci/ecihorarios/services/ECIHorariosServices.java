@@ -14,13 +14,18 @@ import edu.eci.ecihorarios.model.bean.LoginUser;
 public interface ECIHorariosServices {
     
      /**
-     * Metodo que permite saber si la contraseña ingresada fue correcta o no
+     * Metodo que permite saber si un usuario se logeó o no
      * @param username
      * @param password
      * @return LoginUser con el estado del login 
-     * 
      */   
-    public LoginUser checkLogin(String username, String password);
+    public LoginUser isLogin(String username, String password);
     
+      /**
+     * Metodo que permite saber si un usuario esta logeado o no
+     * @param username
+     * @return LoginUser con el estado del login 
+     */   
+    public LoginUser checkLogin(String username);
     
 }

@@ -30,10 +30,10 @@ public class ECIHorariosAPIController {
     
     
     @RequestMapping(path ="/{username}/{password}",method = RequestMethod.GET)
-    public ResponseEntity<?> GetBlueprintsByAuthor(@PathVariable ("username") String username, @PathVariable ("password") String password){
+    public ResponseEntity<?> isLoginUser(@PathVariable ("username") String username, @PathVariable ("password") String password){
        
         try {
-            return new ResponseEntity<>(ecih.checkLogin(username, password),HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(ecih.isLogin(username, password),HttpStatus.ACCEPTED);
         } catch (Exception ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);

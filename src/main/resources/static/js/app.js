@@ -2,6 +2,7 @@ var app = (function(){
     
     var direction = "js/apiclient.js";
     
+    
     var checkLoginUser= function(username,value){
         $.getScript(direction,function(){        
             apiclient.checkUser(username,value,callbackLog);  

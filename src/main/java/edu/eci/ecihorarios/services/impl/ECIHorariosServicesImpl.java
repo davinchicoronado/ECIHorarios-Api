@@ -5,6 +5,7 @@
  */
 package edu.eci.ecihorarios.services.impl;
 
+import edu.eci.ecihorarios.cache.ECIHorariosCache;
 import edu.eci.ecihorarios.persistence.stub.PersistenceManagerStub;
 import edu.eci.ecihorarios.model.bean.LoginUser;
 import edu.eci.ecihorarios.services.ECIHorariosServices;
@@ -18,14 +19,32 @@ import org.springframework.stereotype.Service;
 @Service
 public class ECIHorariosServicesImpl implements ECIHorariosServices{
 
-     @Autowired
-     PersistenceManagerStub pms;
+    @Autowired
+    PersistenceManagerStub pms;
+    
+    @Autowired
+    ECIHorariosCache cacheEci;
     
     
     @Override
-    public LoginUser checkLogin(String username, String password) {
-        return pms.checkLogin(username, password);
+    public LoginUser isLogin(String username, String password) { 
+        
+        boolean status = pms.isLogin(username, password);
+        
+        if(status){ 
+            cacheEci.saveLoginUser(username);
+        } 
+        return new LoginUser(status);
     }
+
+    @Override
+    public LoginUser checkLogin(String username) { 
+        
+        boolean status = cacheEci.isLogged(username);
+        return new LoginUser(status);
+    }
+    
+    
     
     
     

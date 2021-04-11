@@ -5,26 +5,19 @@
  */
 package edu.eci.ecihorarios.model.bean;
 
+import java.util.List;
+
 /**
  *
  * @author David Coronado
  */
-public class LoginUser {
+public class Schedule {
     
-    private boolean status;
+    private String name;
+    private int credits;
+    private String id;
+    private List<Group> groups;
     
-    public LoginUser(boolean status){
-        this.status=status;
-        
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
-
-    public boolean isStatus() {
-        return status;
-    }
-
+    
     
 }
