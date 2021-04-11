@@ -11,9 +11,39 @@ package edu.eci.ecihorarios.model.bean;
  */
 public class Group {
     
-    private String nameTeacher;
+    private String teacher;
     private int numGroup;
+    private String salon;
     
+    public Group(String teacher,int numGroup,String salon){
+        this.teacher=teacher;
+        this.numGroup=numGroup;
+        this.salon=salon;
+    }
+
+    public String getTeacher() {
+        return teacher;
+    }
+
+    public int getNumGroup() {
+        return numGroup;
+    }
+
+    public String getSalon() {
+        return salon;
+    }
+
+    public void setTeacher(String teacher) {
+        this.teacher = teacher;
+    }
+
+    public void setNumGroup(int numGroup) {
+        this.numGroup = numGroup;
+    }
+
+    public void setSalon(String salon) {
+        this.salon = salon;
+    }
     
     
 }
