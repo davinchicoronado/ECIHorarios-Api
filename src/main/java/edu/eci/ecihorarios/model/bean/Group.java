@@ -11,5 +11,9 @@ package edu.eci.ecihorarios.model.bean;
  */
 public class Group {
     
+    private String nameTeacher;
+    private int numGroup;
+    
+    
     
 }
