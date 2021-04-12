@@ -42,19 +42,19 @@ public class PersistenceManagerStub {
         
         //------------------------------------------------------------
         
-        Group g1 = new Group("Gerardo Sanchez",1);
-        Group g2 = new Group("Wilmer Garzon",2);  
-        Group g3 = new Group("Edwin Perez",1);
-        Group g4 = new Group("Andres Pacheco",2);
+        Group g1 = new Group("Gerardo Sanchez",1,25);
+        Group g2 = new Group("Wilmer Garzon",2,30);  
+        Group g3 = new Group("Edwin Perez",1,20);
+        Group g4 = new Group("Andres Pacheco",2,15);
         
-        ClassSchedule cs1 = new ClassSchedule(LocalTime.of(10, 00, 00),"Lunes","F-202");
-        ClassSchedule cs2 = new ClassSchedule(LocalTime.of(11, 30, 00),"Martes","F-202");
-        ClassSchedule cs3 = new ClassSchedule(LocalTime.of(10, 00, 00),"Miercoles","G-102");
-        ClassSchedule cs4 = new ClassSchedule(LocalTime.of(8, 30, 00),"Jueves","C-202");
-        ClassSchedule cs5 = new ClassSchedule(LocalTime.of(7, 00, 00),"Viernes","H-302");
-        ClassSchedule cs6 = new ClassSchedule(LocalTime.of(10, 00, 00),"Miercoles","H-203");
-        ClassSchedule cs7 = new ClassSchedule(LocalTime.of(7, 00, 00),"Viernes","H-302");
-        ClassSchedule cs8 = new ClassSchedule(LocalTime.of(10, 00, 00),"Miercoles","H-203");
+        ClassSchedule cs1 = new ClassSchedule(LocalTime.of(10, 00, 00).toString(),"Lunes","F-202");
+        ClassSchedule cs2 = new ClassSchedule(LocalTime.of(11, 30, 00).toString(),"Martes","F-202");
+        ClassSchedule cs3 = new ClassSchedule(LocalTime.of(10, 00, 00).toString(),"Miercoles","G-102");
+        ClassSchedule cs4 = new ClassSchedule(LocalTime.of(8, 30, 00).toString(),"Jueves","C-202");
+        ClassSchedule cs5 = new ClassSchedule(LocalTime.of(7, 00, 00).toString(),"Viernes","H-302");
+        ClassSchedule cs6 = new ClassSchedule(LocalTime.of(10, 00, 00).toString(),"Miercoles","H-203");
+        ClassSchedule cs7 = new ClassSchedule(LocalTime.of(7, 00, 00).toString(),"Viernes","H-302");
+        ClassSchedule cs8 = new ClassSchedule(LocalTime.of(10, 00, 00).toString(),"Miercoles","H-203");
         
         List<ClassSchedule> css1 = new ArrayList<>();
         List<ClassSchedule> css2 = new ArrayList<>();
@@ -108,9 +108,15 @@ public class PersistenceManagerStub {
         return false;
     }
     
+    
+    
     public List<Subject> getAvailableSubjects(String username){
         return availableSubject.get(username);
     }
     
+    
+    public List<Group> getSchedule(String nameSubject){
+        return schedules.get(nameSubject);
+    } 
     
 }

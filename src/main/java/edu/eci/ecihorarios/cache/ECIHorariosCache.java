@@ -27,7 +27,7 @@ public class ECIHorariosCache {
    
     
     public boolean isLogged(String username){
-        if(loggedUsers.get(username).getHour()-LocalTime.now().getHour()>1){
+        if(loggedUsers.get(username).getHour()-LocalTime.now().getHour()>=1){
             loggedUsers.remove(username);
             return false;
         } 

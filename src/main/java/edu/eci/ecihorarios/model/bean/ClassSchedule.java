@@ -4,26 +4,23 @@
  * and open the template in the editor.
  */
 package edu.eci.ecihorarios.model.bean;
-
-import java.time.LocalTime;
-
 /**
  *
  * @author David Coronado
  */
 public class ClassSchedule {
     
-    private LocalTime hour;
+    private String hour;
     private String classRoom;
     private String day;
     
-    public ClassSchedule(LocalTime hour,String day,String classRoom){
+    public ClassSchedule(String hour,String day,String classRoom){
         this.hour=hour;
         this.day=day;
         this.classRoom=classRoom;    
     }
 
-    public LocalTime getHour() {
+    public String getHour() {
         return hour;
     }
 
@@ -35,7 +32,7 @@ public class ClassSchedule {
         return day;
     }
 
-    public void setHour(LocalTime hour) {
+    public void setHour(String hour) {
         this.hour = hour;
     }
 

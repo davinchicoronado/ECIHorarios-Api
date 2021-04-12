@@ -6,6 +6,7 @@
 package edu.eci.ecihorarios.services.impl;
 
 import edu.eci.ecihorarios.cache.ECIHorariosCache;
+import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.persistence.stub.PersistenceManagerStub;
 import edu.eci.ecihorarios.model.bean.LoginUser;
 import edu.eci.ecihorarios.model.bean.Subject;
@@ -52,11 +53,18 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
             return cacheEci.getAvailableSubjects(username);    
         }
         else{ 
-            
+            return pms.getAvailableSubjects(username);
         
         }
-        return null;
+
     }
+
+    @Override
+    public List<Group> getSchedule(String subjectid) {
+        return pms.getSchedule(subjectid);
+    }
+    
+    
     
     
     

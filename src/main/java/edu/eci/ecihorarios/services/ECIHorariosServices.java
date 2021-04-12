@@ -5,6 +5,7 @@
  */
 package edu.eci.ecihorarios.services;
 
+import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.model.bean.LoginUser;
 import edu.eci.ecihorarios.model.bean.Subject;
 import java.util.List;
@@ -37,6 +38,16 @@ public interface ECIHorariosServices {
      */ 
     
     public List<Subject> getAvailableSubjects(String username);
+    
+    
+     /**
+     * Metodo que permite consultar los horarios de una materia
+     * @param subjectid id de la materia
+     * @return List con el horario de los distintos grupos de una materia 
+     */ 
+    
+    public List<Group> getSchedule(String subjectid);
+    
     
     
 }
