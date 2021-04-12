@@ -5,24 +5,24 @@
  */
 package edu.eci.ecihorarios.model.bean;
 
-import java.util.List;
-
 /**
  *
  * @author David Coronado
  */
-public class Schedule {
+public class Subject {
     
     private String name;
     private int credits;
     private String id;
-    private List<Group> groups;
+    private int level;
 
-    public Schedule(String name,int credits,String id){
+    public Subject(String name,int credits,String id,int level){
         this.name=name;
         this.credits=credits;
         this.id=id;
+        this.level=level;
     }
+    
 
     public String getName() {
         return name;
@@ -36,9 +36,7 @@ public class Schedule {
         return id;
     }
 
-    public List<Group> getGroups() {
-        return groups;
-    }
+
 
     public void setName(String name) {
         this.name = name;
@@ -52,8 +50,13 @@ public class Schedule {
         this.id = id;
     }
 
-    public void setGroups(List<Group> groups) {
-        this.groups = groups;
+    public int getLevel() {
+        return level;
     }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+    
     
 }

@@ -5,6 +5,8 @@
  */
 package edu.eci.ecihorarios.model.bean;
 
+import java.util.List;
+
 /**
  *
  * @author David Coronado
@@ -13,12 +15,11 @@ public class Group {
     
     private String teacher;
     private int numGroup;
-    private String salon;
+    private List<ClassSchedule> lessons;
     
-    public Group(String teacher,int numGroup,String salon){
+    public Group(String teacher,int numGroup){
         this.teacher=teacher;
         this.numGroup=numGroup;
-        this.salon=salon;
     }
 
     public String getTeacher() {
@@ -29,9 +30,7 @@ public class Group {
         return numGroup;
     }
 
-    public String getSalon() {
-        return salon;
-    }
+
 
     public void setTeacher(String teacher) {
         this.teacher = teacher;
@@ -41,9 +40,12 @@ public class Group {
         this.numGroup = numGroup;
     }
 
-    public void setSalon(String salon) {
-        this.salon = salon;
+    public List<ClassSchedule> getLessons() {
+        return lessons;
     }
-    
-    
+
+    public void setLessons(List<ClassSchedule> lessons) {
+        this.lessons = lessons;
+    }
+   
 }
