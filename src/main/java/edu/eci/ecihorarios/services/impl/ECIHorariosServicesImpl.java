@@ -8,7 +8,9 @@ package edu.eci.ecihorarios.services.impl;
 import edu.eci.ecihorarios.cache.ECIHorariosCache;
 import edu.eci.ecihorarios.persistence.stub.PersistenceManagerStub;
 import edu.eci.ecihorarios.model.bean.LoginUser;
+import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.services.ECIHorariosServices;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,11 +40,24 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
     }
 
     @Override
-    public LoginUser checkLogin(String username) { 
-        
+    public LoginUser checkLogin(String username) {     
         boolean status = cacheEci.isLogged(username);
         return new LoginUser(status);
     }
+
+    @Override
+    public List<Subject> getAvailableSubjects(String username) {
+        
+        if(cacheEci.inCacheAvailableSubjects(username)){
+            return cacheEci.getAvailableSubjects(username);    
+        }
+        else{ 
+            
+        
+        }
+        return null;
+    }
+    
     
     
     

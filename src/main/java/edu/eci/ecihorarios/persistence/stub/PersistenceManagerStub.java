@@ -23,7 +23,7 @@ import org.springframework.stereotype.Service;
 public class PersistenceManagerStub {
     
     private HashMap<String,String> passwords = new HashMap<>();
-    private HashMap<String,List<Subject>> disposablesSubject = new HashMap<>();
+    private HashMap<String,List<Subject>> availableSubject = new HashMap<>();
     private HashMap<String,List<Group>>  schedules = new HashMap<>();
     
     public PersistenceManagerStub(){
@@ -38,7 +38,7 @@ public class PersistenceManagerStub {
         dSchedule.add(s2);
         dSchedule.add(s1);
         
-        disposablesSubject.put("admin", dSchedule);
+        availableSubject.put("admin", dSchedule);
         
         //------------------------------------------------------------
         
@@ -108,10 +108,8 @@ public class PersistenceManagerStub {
         return false;
     }
     
-    public List<Subject> getScheduleDisposables(String username){
-        
-    
-        return null;
+    public List<Subject> getAvailableSubjects(String username){
+        return availableSubject.get(username);
     }
     
     

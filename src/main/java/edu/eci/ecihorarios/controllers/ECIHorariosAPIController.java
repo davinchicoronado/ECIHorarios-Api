@@ -40,5 +40,16 @@ public class ECIHorariosAPIController {
         }        
     }
     
+    @RequestMapping(path ="/subjects/{username}",method = RequestMethod.GET)
+    public ResponseEntity<?> availableSubjects(@PathVariable ("username") String username){
+       
+        try {
+            return new ResponseEntity<>(ecih.getAvailableSubjects(username),HttpStatus.ACCEPTED);
+        } catch (Exception ex) {
+            Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
+        }        
+    }
+    
     
 }

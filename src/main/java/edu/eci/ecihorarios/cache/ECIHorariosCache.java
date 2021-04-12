@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package edu.eci.ecihorarios.cache;
+import edu.eci.ecihorarios.model.bean.Subject;
 import java.time.LocalTime;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,7 @@ public class ECIHorariosCache {
     
     
     ConcurrentHashMap<String,LocalTime> loggedUsers = new ConcurrentHashMap<>();
+    ConcurrentHashMap<String,List<Subject>> availableSubjects = new ConcurrentHashMap<>();
 
     public void saveLoginUser(String username){
         loggedUsers.put(username, LocalTime.now());      
@@ -32,4 +35,13 @@ public class ECIHorariosCache {
         return true;
     }
     
+    public boolean inCacheAvailableSubjects(String username){
+        if(availableSubjects.containsKey(username)){
+            return true;
+        }
+        return false;
+    } 
+    public List<Subject> getAvailableSubjects(String username){
+        return availableSubjects.get(username);
+    }
 }

@@ -6,6 +6,8 @@
 package edu.eci.ecihorarios.services;
 
 import edu.eci.ecihorarios.model.bean.LoginUser;
+import edu.eci.ecihorarios.model.bean.Subject;
+import java.util.List;
 
 /**
  *
@@ -27,5 +29,14 @@ public interface ECIHorariosServices {
      * @return LoginUser con el estado del login 
      */   
     public LoginUser checkLogin(String username);
+    
+    /**
+     * Metodo que permite consultar las materias que puede ver el estudiante
+     * @param username
+     * @return List con las materias 
+     */ 
+    
+    public List<Subject> getAvailableSubjects(String username);
+    
     
 }
