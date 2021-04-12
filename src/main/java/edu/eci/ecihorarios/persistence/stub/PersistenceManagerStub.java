@@ -9,6 +9,7 @@ package edu.eci.ecihorarios.persistence.stub;
 import edu.eci.ecihorarios.model.bean.ClassSchedule;
 import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.model.bean.Subject;
+import edu.eci.ecihorarios.model.bean.User;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,9 +26,16 @@ public class PersistenceManagerStub {
     private HashMap<String,String> passwords = new HashMap<>();
     private HashMap<String,List<Subject>> availableSubject = new HashMap<>();
     private HashMap<String,List<Group>>  schedules = new HashMap<>();
+    private HashMap<String,User> users = new HashMap<>();
+    
     
     public PersistenceManagerStub(){
         
+        
+        User u = new User("pepito perez","1234567",'E',"pepito.perez@mail.escuelaing.edu.co","admin",3,18); 
+        users.put("admin", u);
+        
+        //-----------------------------------------
         passwords.put("admin","admin");
         
         Subject s1 = new Subject("Logica Calculativa",3,"LCAT",2);
@@ -117,6 +125,10 @@ public class PersistenceManagerStub {
     
     public List<Group> getSchedule(String nameSubject){
         return schedules.get(nameSubject);
-    } 
+    }  
+    
+    public User getUser(String username){
+        return users.get(username);
+    }
     
 }

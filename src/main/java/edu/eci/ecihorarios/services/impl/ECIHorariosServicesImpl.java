@@ -10,10 +10,11 @@ import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.persistence.stub.PersistenceManagerStub;
 import edu.eci.ecihorarios.model.bean.LoginUser;
 import edu.eci.ecihorarios.model.bean.Subject;
+import edu.eci.ecihorarios.model.bean.User;
 import edu.eci.ecihorarios.services.ECIHorariosServices;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Service; 
 
 /**
  *
@@ -62,6 +63,11 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
     @Override
     public List<Group> getSchedule(String subjectid) {
         return pms.getSchedule(subjectid);
+    }
+
+    @Override
+    public User getUser(String username) {
+        return pms.getUser(username);
     }
     
     

@@ -40,6 +40,18 @@ public class ECIHorariosAPIController {
         }        
     }
     
+    @RequestMapping(path ="/{username}",method = RequestMethod.GET)
+    public ResponseEntity<?> getUser(@PathVariable ("username") String username){
+       
+        try {
+            return new ResponseEntity<>(ecih.getUser(username),HttpStatus.ACCEPTED);
+        } catch (Exception ex) {
+            Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
+        }        
+    }
+    
+    
     @RequestMapping(path ="/subjects/{username}",method = RequestMethod.GET)
     public ResponseEntity<?> availableSubjects(@PathVariable ("username") String username){
        
