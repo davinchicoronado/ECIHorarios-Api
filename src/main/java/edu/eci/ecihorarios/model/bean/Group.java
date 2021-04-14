@@ -17,6 +17,7 @@ public class Group {
     private int numGroup;
     private List<ClassSchedule> lessons; 
     private int limit;
+
     
     public Group(String teacher,int numGroup, int limit){
         this.teacher=teacher;
@@ -57,6 +58,5 @@ public class Group {
     public void setLimit(int limit) {
         this.limit = limit;
     }
-   
-    
+  
 }

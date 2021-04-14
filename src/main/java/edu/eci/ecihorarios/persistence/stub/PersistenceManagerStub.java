@@ -9,7 +9,9 @@ package edu.eci.ecihorarios.persistence.stub;
 import edu.eci.ecihorarios.model.bean.ClassSchedule;
 import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.model.bean.Subject;
+import edu.eci.ecihorarios.model.bean.SubjectStudent;
 import edu.eci.ecihorarios.model.bean.User;
+import edu.eci.ecihorarios.persistence.PersistenceManager;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,19 +23,19 @@ import org.springframework.stereotype.Service;
  * @author David Coronado
  */
 @Service
-public class PersistenceManagerStub {
+public class PersistenceManagerStub implements PersistenceManager{
     
     private HashMap<String,String> passwords = new HashMap<>();
     private HashMap<String,List<Subject>> availableSubject = new HashMap<>();
     private HashMap<String,List<Group>>  schedules = new HashMap<>();
     private HashMap<String,User> users = new HashMap<>();
-    
-    
+    private HashMap<String,List<SubjectStudent>> scheduleStudents = new HashMap<>();
     public PersistenceManagerStub(){
         
         
-        User u = new User("pepito perez","1234567",'E',"pepito.perez@mail.escuelaing.edu.co","admin",3,18); 
+        User u = new User("pepito perez","1234567",'E',"pepito.perez@mail.escuelaing.edu.co","admin",3,4); 
         users.put("admin", u);
+        
         
         //-----------------------------------------
         passwords.put("admin","admin");
@@ -61,8 +63,8 @@ public class PersistenceManagerStub {
         ClassSchedule cs4 = new ClassSchedule(LocalTime.of(8, 30, 00).toString(),"Jueves","C-202");
         ClassSchedule cs5 = new ClassSchedule(LocalTime.of(7, 00, 00).toString(),"Viernes","H-302");
         ClassSchedule cs6 = new ClassSchedule(LocalTime.of(10, 00, 00).toString(),"Miercoles","H-203");
-        ClassSchedule cs7 = new ClassSchedule(LocalTime.of(7, 00, 00).toString(),"Viernes","H-302");
-        ClassSchedule cs8 = new ClassSchedule(LocalTime.of(10, 00, 00).toString(),"Miercoles","H-203");
+        ClassSchedule cs7 = new ClassSchedule(LocalTime.of(1, 00, 00).toString(),"Viernes","G-302");
+        ClassSchedule cs8 = new ClassSchedule(LocalTime.of(4, 00, 00).toString(),"Miercoles","D-203");
         
         List<ClassSchedule> css1 = new ArrayList<>();
         List<ClassSchedule> css2 = new ArrayList<>();
@@ -99,10 +101,15 @@ public class PersistenceManagerStub {
         
         schedules.put("LCAT", sh1);     
         schedules.put("CALD", sh2);
-
+        
+        //----------------------------------------------------
+        List<SubjectStudent> schedules1 = new ArrayList<SubjectStudent>();
+        
+        scheduleStudents.put("admin", schedules1);
+        
         
     }
-
+    @Override
     public boolean isLogin(String username, String password){
         
         if(passwords.containsKey(username)){
@@ -117,18 +124,26 @@ public class PersistenceManagerStub {
     }
     
     
-    
+    @Override
     public List<Subject> getAvailableSubjects(String username){
         return availableSubject.get(username);
     }
     
-    
+    @Override
     public List<Group> getSchedule(String nameSubject){
         return schedules.get(nameSubject);
     }  
     
+    @Override 
     public User getUser(String username){
         return users.get(username);
+    } 
+    
+    @Override
+    public void saveScheduleStudent(List<SubjectStudent> schedule){
+        System.out.println(schedule.toString());
     }
+
+
     
 }

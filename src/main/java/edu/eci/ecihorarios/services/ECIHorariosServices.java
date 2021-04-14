@@ -8,6 +8,7 @@ package edu.eci.ecihorarios.services;
 import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.model.bean.LoginUser;
 import edu.eci.ecihorarios.model.bean.Subject;
+import edu.eci.ecihorarios.model.bean.SubjectStudent;
 import edu.eci.ecihorarios.model.bean.User;
 import java.util.List;
 
@@ -53,6 +54,13 @@ public interface ECIHorariosServices {
      * @param username del usuario
      * @return List con el horario de los distintos grupos de una materia 
      */  
-    public User getUser(String username);
+    public User getUser(String username); 
+    
+     /**
+     * Metodo que guardar horarios de un estudiante
+     *  
+     * @param ss 
+     */  
+    public void saveScheduleStudent(List<SubjectStudent> ss);
     
 }

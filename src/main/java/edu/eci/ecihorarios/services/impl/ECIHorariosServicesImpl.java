@@ -10,6 +10,7 @@ import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.persistence.stub.PersistenceManagerStub;
 import edu.eci.ecihorarios.model.bean.LoginUser;
 import edu.eci.ecihorarios.model.bean.Subject;
+import edu.eci.ecihorarios.model.bean.SubjectStudent;
 import edu.eci.ecihorarios.model.bean.User;
 import edu.eci.ecihorarios.services.ECIHorariosServices;
 import java.util.List;
@@ -68,6 +69,11 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
     @Override
     public User getUser(String username) {
         return pms.getUser(username);
+    }
+
+    @Override
+    public void saveScheduleStudent(List<SubjectStudent> ss) {
+        pms.saveScheduleStudent(ss);
     }
     
     
