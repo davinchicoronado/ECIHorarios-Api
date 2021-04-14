@@ -61,7 +61,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 [Presione Aqui para revisar El Diagrama De Entidad Relación](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/CasosDeUso/ProyectCasosDeUso.asta)
 ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Diagramas/Funciones.png)
 
-### Diagrama de Despliegue
+### Diagrama de Entidad Relación
 [Presione Aqui para revisar El Diagrama De Despliegue](https://github.com/Software-Development-Industries/ECI-Horarios/tree/master/design/app)
 ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Diagramas/ECI_Horarios%20Diagrama%20clases.png)
 
