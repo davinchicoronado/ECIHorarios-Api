@@ -65,7 +65,12 @@
             <groupId>org.webjars</groupId>
             <artifactId>webjars-locator</artifactId>
             <version>0.14</version>
-		</dependency>
+		</dependency>   
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+        </dependency>
+
   </dependencies>
   <build> 
   		<plugins>
