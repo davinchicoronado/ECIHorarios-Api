@@ -5,7 +5,7 @@ import edu.eci.ecihorarios.model.bean.CredentialsUser;
 import edu.eci.ecihorarios.persistence.db.DaoUser;
 import edu.eci.ecihorarios.persistence.db.PersistenceException;
 import edu.eci.ecihorarios.persistence.db.mongoimpl.MongoDAOUser;
-import edu.eci.ecihorariosapi.SecurityConfig;
+import edu.eci.ecihorariosapi.SecurityConfigTest;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static org.junit.Assert.assertTrue;
@@ -21,7 +21,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @ContextConfiguration(locations ="/applicationContext.xml") 
 @RunWith(SpringRunner.class)  
-@SpringBootTest(classes = {MongoDAOUser.class, SecurityConfig.class}) 
+@SpringBootTest(classes = {MongoDAOUser.class, SecurityConfigTest.class}) 
 public class ApplicationServicesTests {
     
     @Autowired
@@ -70,6 +70,5 @@ public class ApplicationServicesTests {
             assertTrue(true);
         }
         
-     
     }
 }

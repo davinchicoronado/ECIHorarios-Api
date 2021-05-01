@@ -6,7 +6,6 @@
 package edu.eci.ecihorarios.persistence.db.mongoimpl;
 
 import edu.eci.ecihorarios.model.bean.CredentialsUser;
-import edu.eci.ecihorarios.model.bean.User;
 import edu.eci.ecihorarios.persistence.db.DaoUser;
 import edu.eci.ecihorarios.persistence.db.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,13 +28,14 @@ public class MongoDAOUser implements DaoUser {
     @Override
     public CredentialsUser getUser(String username) throws PersistenceException{ 
         
+       
         Query query = new Query();
         query.addCriteria(Criteria.where("_id").is(username)); 
         
         CredentialsUser user =  mongoTemplate.findOne(query, CredentialsUser.class);
         
         if(user == null){
-            throw new PersistenceException("Error no se encontró usuario");
+            throw new PersistenceException("Error no se encontro usuario");
         }
         
         return mongoTemplate.findOne(query, CredentialsUser.class);
