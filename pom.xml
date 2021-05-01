@@ -70,8 +70,11 @@
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-mongodb</artifactId>
         </dependency>
-
-  </dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+	</dependencies>
   <build> 
   		<plugins>
 			<plugin>
@@ -91,8 +94,13 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> 
 		</plugins>
-    <finalName>ECI_Horarios</finalName>
+    <finalName>ECI_Horarios</finalName> 
+	<testResources>
+                <testResource>
+                    <directory>src/main/resources</directory>
+                </testResource>
+    </testResources>
   </build>
 </project>

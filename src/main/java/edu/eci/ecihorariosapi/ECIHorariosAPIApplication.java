@@ -5,22 +5,11 @@
  */
 package edu.eci.ecihorariosapi;
 
-import edu.eci.ecihorarios.model.bean.BeanC;
+
 import java.util.Collections;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ImportResource;
-
-import org.springframework.data.mongodb.core.MongoOperations;
-import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.repository.config.AnnotationRepositoryConfigurationSource;
-import org.springframework.core.type.AnnotationMetadata;
-import org.springframework.core.io.ResourceLoader;
-import org.springframework.core.env.Environment;
-import java.lang.Class;
 
 /**
  *
@@ -29,11 +18,8 @@ import java.lang.Class;
 
 @SpringBootApplication 
 @ComponentScan(basePackages = {"edu.eci.ecihorarios"})
-@ImportResource("applicationContext.xml")
+
 public class ECIHorariosAPIApplication {
-    
-    @Autowired 
-    MongoTemplate mongoTemplate;
     
     public static void main(String[] args) { 
         
@@ -42,7 +28,8 @@ public class ECIHorariosAPIApplication {
         app.run(args);
     }
 
-    static int getPort() {
+    static int getPort() { 
+
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
         }

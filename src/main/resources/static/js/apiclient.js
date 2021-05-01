@@ -1,7 +1,7 @@
 var apiclient = (function () { 
     
-    var Url = 'https://ecihorarios.herokuapp.com/ecihorarios/';
-  
+    //var Url = 'https://ecihorarios.herokuapp.com/ecihorarios/';
+    var Url = 'http://localhost:8080/ecihorarios/';
     return{
           checkUser : function(username,password,callback){
               

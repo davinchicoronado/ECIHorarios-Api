@@ -17,4 +17,29 @@ body,html{
     left: 50%;
     transform: translate(-50%, -50%); 
     
+} 
+#logoLogin { 
+  border-radius: 3%;
+} 
+
+#logoIndex {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+h3 {
+    text-align: center; 
+    vertical-align: bottom;
+} 
+
+p {
+    text-align: justify; 
+    vertical-align: middle; 
+   
+} 
+.center {
+  margin: auto;
+  width: 90%;
+  padding: 10px;
 }

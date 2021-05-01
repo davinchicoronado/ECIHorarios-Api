@@ -5,6 +5,7 @@
  */
 package edu.eci.ecihorarios.persistence.db;
 
+import edu.eci.ecihorarios.model.bean.CredentialsUser;
 import edu.eci.ecihorarios.model.bean.User;
 
 /**
@@ -13,6 +14,9 @@ import edu.eci.ecihorarios.model.bean.User;
  */
 public interface DaoUser {
     
-    public User getUser(String username);
+    public CredentialsUser getUser(String username) throws PersistenceException; 
+    
+    public void saveUser(CredentialsUser user) throws PersistenceException;
+    
     
 }

@@ -15,6 +15,7 @@ import edu.eci.ecihorarios.model.bean.User;
 import edu.eci.ecihorarios.services.ECIHorariosServices;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.stereotype.Service; 
 
 /**
@@ -22,6 +23,7 @@ import org.springframework.stereotype.Service;
  * @author David Coronado
  */
 @Service
+@ImportResource("applicationContext.xml")
 public class ECIHorariosServicesImpl implements ECIHorariosServices{
 
     @Autowired
@@ -29,12 +31,12 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
     
     @Autowired
     ECIHorariosCache cacheEci;
-    
+      
     
     @Override
     public LoginUser isLogin(String username, String password) { 
         
-        boolean status = pms.isLogin(username, password);
+   boolean status = pms.isLogin(username, password);
         
         if(status){ 
             cacheEci.saveLoginUser(username);

@@ -15,7 +15,7 @@
            
                 <form class="form-signin" align="center" id="login">    
 
-                            <img class="mb-4" src="img/logoeci.png" alt="" width="200" height="100">
+                            <img class="mb-4" src="img/logoeci.png" id="logoLogin"alt="" width="200" height="100">
                             <input type="text" class="form-control" id="InputUsername"  placeholder="Username">      
                             <input type="password" class="form-control" id="InputPassword" placeholder="Password">
                             <button type="submit" class="btn btn-primary" onClick="app.loginUser(InputUsername.value,InputPassword.value)">Submit</button>
@@ -45,11 +45,14 @@
                 <div id="Inicio"> 
                     <div class="row align-items-start">  
                         <div class="col"> 
-                            <img class="mb-4" src="img/logo2.jpg" alt="" width="500" height="500"> 
+                            <img class="mb-4" id="logoIndex" src="img/logo2.jpg" alt="" width="500" height="500"> 
                         </div> 
                         <div class="col"> 
-                            <div class="panel panel-default">
-                                <h3 align="center">Descripción</h3>
+                            <div class="center">
+       
+                                <h3 align="center">Descripción</h3> 
+
+           
                                 <p>
                                     Esta aplicación fue desarrollada como parte de un proyecto de la asignatura Arquitecturas de Software
                                     de la Escuela Colombiana de Ingeniería Julio Garavito, con el fin de permitirle al estudiante inscribir 
@@ -64,7 +67,7 @@
                                     en el cumplimiento de los requisitos no funcionales, convencionales o especiales de un sistema de
                                     software, es necesario que los estuiantes conozcan y estén preparados para aplicar los fundamentos
                                     y las buenas practicas asociadas a estos dos apectos.
-                                    
+                       
                                 </p>
                             </div>
                         </div>

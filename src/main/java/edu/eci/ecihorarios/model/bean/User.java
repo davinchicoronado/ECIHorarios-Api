@@ -5,13 +5,20 @@
  */
 package edu.eci.ecihorarios.model.bean;
 
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  *
  * @author David Coronado
- */
+ */ 
+@Document(collection = "Users")
 public class User {
     
-    private String name;
+    private String name;  
+    
+    @Id
     private String id;
     private char tipo;
     private String email;
@@ -19,6 +26,11 @@ public class User {
     private int semester;
     private int limitCredits;
 
+    
+    public User(){
+    
+    }
+    
     public User(String name, String id, char tipo, String email, String username, int semester, int limitCredits) {
         this.name = name;
         this.id = id;
