@@ -17,7 +17,8 @@ public class CredentialsUser {
     
     @Id
     private String username;
-    private String password;
+    private String password; 
+    private String token;
 
     
     public String getUsername() {
@@ -34,6 +35,14 @@ public class CredentialsUser {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
     
 }

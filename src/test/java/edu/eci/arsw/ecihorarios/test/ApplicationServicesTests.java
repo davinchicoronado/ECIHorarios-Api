@@ -5,7 +5,7 @@ import edu.eci.ecihorarios.model.bean.CredentialsUser;
 import edu.eci.ecihorarios.persistence.db.DaoUser;
 import edu.eci.ecihorarios.persistence.db.PersistenceException;
 import edu.eci.ecihorarios.persistence.db.mongoimpl.MongoDAOUser;
-import edu.eci.ecihorariosapi.SecurityConfigTest;
+import edu.eci.ecihorariosapi.config.test.SecurityConfigTest;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static org.junit.Assert.assertTrue;
@@ -35,15 +35,21 @@ public class ApplicationServicesTests {
     public void saveUser() { 
         
         CredentialsUser user = new CredentialsUser(); 
-        user.setUsername("david.coronado");
-        user.setPassword(encoder.encode("admin123"));
+        user.setUsername("apiclient");
+        user.setPassword(encoder.encode("client123"));
       
         
-        daouser.saveUser(user);  
+        try {  
+            daouser.saveUser(user); 
+            assertTrue(user.getPassword().equals(daouser.getUser("apiclient").getPassword()));
+        } catch (PersistenceException ex) {
+            Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
-        assertTrue(user.getPassword().equals(daouser.getUser("david.coronado").getPassword()));
+        
     }
-    **/ 
+    **/
+    
     
     @Test 
     public void nosaveUser() {
@@ -59,7 +65,7 @@ public class ApplicationServicesTests {
             assertTrue(true);         
         }
     }
-
+    
     @Test 
     public void nogetUser() {
             

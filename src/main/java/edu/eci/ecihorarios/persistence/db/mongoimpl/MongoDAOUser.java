@@ -29,6 +29,7 @@ public class MongoDAOUser implements DaoUser {
     public CredentialsUser getUser(String username) throws PersistenceException{ 
         
        
+        
         Query query = new Query();
         query.addCriteria(Criteria.where("_id").is(username)); 
         

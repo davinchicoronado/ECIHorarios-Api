@@ -20,6 +20,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 /**
@@ -27,8 +28,11 @@ import org.springframework.stereotype.Service;
  * @author David Coronado
  */  
 @Service
-@ImportResource("applicationContext.xml")
+@ImportResource("applicationContext.xml") 
 public class ECIHorariosUserServicesImpl implements UserDetailsService{ 
+    
+    BCryptPasswordEncoder encoder;
+    
     
     @Autowired 
     private DaoUser daouser;

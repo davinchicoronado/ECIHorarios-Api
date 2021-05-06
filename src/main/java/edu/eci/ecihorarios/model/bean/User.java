@@ -15,6 +15,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */ 
 @Document(collection = "Users")
 public class User {
+
+    public static Object builder() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     private String name;  
     

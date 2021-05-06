@@ -91,7 +91,11 @@ public class ECIHorariosAPIController {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
         }        
-    } 
+    }  
+    
+     
+     
+    
     
     
 }
