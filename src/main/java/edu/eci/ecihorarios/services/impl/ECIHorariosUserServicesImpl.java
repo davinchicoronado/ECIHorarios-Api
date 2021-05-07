@@ -42,7 +42,7 @@ public class ECIHorariosUserServicesImpl implements UserDetailsService{
         try {
             CredentialsUser us = daouser.getUser(username); 
             List<GrantedAuthority> roles = new ArrayList<>();
-            roles.add(new SimpleGrantedAuthority("ADMIN"));
+            roles.add(new SimpleGrantedAuthority(us.getRole()));
             
             UserDetails userDet = new User(us.getUsername(),us.getPassword(),roles);
             

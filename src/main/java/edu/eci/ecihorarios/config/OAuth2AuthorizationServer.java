@@ -31,6 +31,8 @@ public class OAuth2AuthorizationServer extends AuthorizationServerConfigurerAdap
     @Autowired 
     private AuthenticationManager auManager;
     
+    @Autowired 
+    private TokenStore tokenStore;
     
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
@@ -53,7 +55,7 @@ public class OAuth2AuthorizationServer extends AuthorizationServerConfigurerAdap
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-        endpoints.authenticationManager(auManager);
+        endpoints.authenticationManager(auManager).tokenStore(tokenStore);
     }
     
     

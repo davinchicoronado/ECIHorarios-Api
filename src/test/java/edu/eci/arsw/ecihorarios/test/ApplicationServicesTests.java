@@ -30,27 +30,27 @@ public class ApplicationServicesTests {
     @Autowired 
     private BCryptPasswordEncoder encoder;
     
-    /**
+    
     @Test 
     public void saveUser() { 
         
         CredentialsUser user = new CredentialsUser(); 
-        user.setUsername("apiclient");
-        user.setPassword(encoder.encode("client123"));
-      
+        user.setUsername("david.coronado");
+        user.setPassword(encoder.encode("admin123"));
+        user.setRole("USER");
         
         try {  
             daouser.saveUser(user); 
-            assertTrue(user.getPassword().equals(daouser.getUser("apiclient").getPassword()));
+            assertTrue(user.getPassword().equals(daouser.getUser("david.coronado").getPassword()));
         } catch (PersistenceException ex) {
             Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         
     }
-    **/
     
     
+    /**
     @Test 
     public void nosaveUser() {
         CredentialsUser user = new CredentialsUser(); 
@@ -65,7 +65,7 @@ public class ApplicationServicesTests {
             assertTrue(true);         
         }
     }
-    
+    **/
     @Test 
     public void nogetUser() {
             
