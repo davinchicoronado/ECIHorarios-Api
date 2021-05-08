@@ -28,7 +28,7 @@ import org.springframework.stereotype.Service;
  * @author David Coronado
  */  
 @Service
-@ImportResource("applicationContext.xml") 
+//@ImportResource("applicationContext.xml") 
 public class ECIHorariosUserServicesImpl implements UserDetailsService{ 
     
     BCryptPasswordEncoder encoder;
