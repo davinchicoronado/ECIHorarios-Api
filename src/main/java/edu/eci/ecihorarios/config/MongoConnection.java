@@ -17,7 +17,7 @@ import com.mongodb.client.MongoClient;
  * @author David Coronado
  */ 
 @Configuration
-public class MongoConfig {
+public class MongoConnection {
 
     @Bean
     public MongoTemplate mongoTemplate() {

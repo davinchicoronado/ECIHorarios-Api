@@ -18,5 +18,8 @@ public interface DaoUser {
     
     public void saveUser(CredentialsUser user) throws PersistenceException;
     
+    public User getUserDetails(String username) throws PersistenceException;
+    
+    public void saveUserDetails(User user) throws PersistenceException;
     
 }

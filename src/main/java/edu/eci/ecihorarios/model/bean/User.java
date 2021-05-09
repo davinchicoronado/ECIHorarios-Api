@@ -6,6 +6,7 @@
 package edu.eci.ecihorarios.model.bean;
 
 
+import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -16,20 +17,19 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "Users")
 public class User {
 
-    public static Object builder() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
     
-    private String name;  
+      
     
     @Id
+    private String username;
     private String id;
     private char tipo;
-    private String email;
-    private String username;
+    private String email; 
     private int semester;
     private int limitCredits;
-
+    private String name; 
+    private List<String> approvedSubjects;
     
     public User(){
     
@@ -101,6 +101,14 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public List<String> getApprovedSubjects() {
+        return approvedSubjects;
+    }
+
+    public void setApprovedSubjects(List<String> approvedSubjects) {
+        this.approvedSubjects = approvedSubjects;
     }
     
     
