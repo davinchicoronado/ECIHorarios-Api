@@ -26,6 +26,9 @@ public class User {
     private int limitCredits;
     private String name; 
     private List<String> approvedSubjects;
+    private String carrer;
+
+
     
     public User(){
     
@@ -111,6 +114,13 @@ public class User {
         this.identification = identification;
     }
     
+    public void setCarrer(String carrer) {
+        this.carrer = carrer;
+    }
+
+    public String getCarrer() {
+        return carrer;
+    }
     
     
     

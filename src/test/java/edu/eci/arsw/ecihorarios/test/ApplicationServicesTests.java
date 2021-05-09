@@ -84,16 +84,14 @@ public class ApplicationServicesTests {
     /**
     @Test
     public void saveUserDetails() {
-        User u = new User("David Leonardo Coronado", "1234567", 'E', "david.coronado@mail.escuelaing.edu.co", "david.coronado", 2, 18);
-        List<String> approved = new ArrayList<>();
-        approved.add("PREM");
-        approved.add("AGEO");
-        approved.add("FUME");
-        approved.add("INSI");
-        approved.add("ELBA");
-        approved.add("FCO1");
-
-        u.setApprovedSubjects(approved);
+        User u = new User();
+        u.setName("Gerardo Sanchez");
+        u.setIdentification("1234567");
+        u.setTipo('A');
+        u.setEmail("gerardo.sanchez@mail.escuelaing.edu.co");
+        u.setUsername("apiclient"); 
+        u.setCarrer("Ingenieria de Sistemas");
+        
 
         try {
             daouser.saveUserDetails(u);
@@ -114,7 +112,7 @@ public class ApplicationServicesTests {
         approved.add("ELBA");
         approved.add("FCO1");
 
-        u.setApprovedSubjects(approved);
+      
 
         try {
             daouser.saveUserDetails(u);
@@ -124,5 +122,5 @@ public class ApplicationServicesTests {
                     null, ex);
         }
     }
-
+    
 }
