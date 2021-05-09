@@ -3,28 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.ecihorarios.persistence;
+package edu.eci.ecihorarios.services;
 
 /**
  *
  * @author David Coronado
  */
-public class PersistenceException extends Exception{
-    
-    public PersistenceException(String message) {
+public class ServicesException extends Exception{
+    public ServicesException(String message) {
         super(message);
     }
 
-    public PersistenceException(String message, Throwable cause) {
+    public ServicesException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public PersistenceException(Throwable cause) {
+    public ServicesException(Throwable cause) {
         super(cause);
     }
 
-    public PersistenceException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public ServicesException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
+    
+    
     
 }

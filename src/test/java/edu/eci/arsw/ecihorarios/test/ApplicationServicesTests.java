@@ -4,7 +4,7 @@ import edu.eci.ecihorarios.config.MongoConnection;
 import edu.eci.ecihorarios.model.bean.CredentialsUser;
 import edu.eci.ecihorarios.model.bean.User;
 import edu.eci.ecihorarios.persistence.db.DaoUser;
-import edu.eci.ecihorarios.persistence.db.PersistenceException;
+import edu.eci.ecihorarios.persistence.PersistenceException;
 import edu.eci.ecihorarios.persistence.db.mongoimpl.MongoDAOUser;
 import edu.eci.ecihorariosapi.config.test.SecurityConfigTest;
 import java.util.ArrayList;
@@ -32,7 +32,7 @@ public class ApplicationServicesTests {
     private BCryptPasswordEncoder encoder;
 
     /**
-     * @Test public void saveUser() { * CredentialsUser user = new
+     * @Test public void saveUser() { CredentialsUser user = new
      * CredentialsUser(); user.setUsername("david.coronado");
      * user.setPassword(encoder.encode("admin123")); user.setRole("USER");
      *
@@ -41,7 +41,6 @@ public class ApplicationServicesTests {
      * } catch (PersistenceException ex) {
      * Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE,
      * null, ex); }
-     *
      *
      * }
      *
@@ -82,25 +81,9 @@ public class ApplicationServicesTests {
             assertTrue(true);
         }
     }
-
     /**
-     * @Test public void saveUserDetails() { User u = new User("David Leonardo
-     * Coronado","1234567",'E',"david.coronado@mail.escuelaing.edu.co","david.coronado",2,18);
-     * List<String> approved = new ArrayList<>(); approved.add("PREM");
-     * approved.add("AGEO"); approved.add("FUME"); approved.add("INSI");
-     * approved.add("ELBA"); approved.add("FCO1");
-     *
-     * u.setApprovedSubjects(approved);
-     *
-     * try { daouser.saveUserDetails(u);
-     * assertTrue(u.getUsername().equals(daouser.getUserDetails(u.getUsername()).getUsername()));
-     * } catch (PersistenceException ex) {
-     * Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE,
-     * null, ex); } }
-    *
-     */
     @Test
-    public void nosaveUserDetails() {
+    public void saveUserDetails() {
         User u = new User("David Leonardo Coronado", "1234567", 'E', "david.coronado@mail.escuelaing.edu.co", "david.coronado", 2, 18);
         List<String> approved = new ArrayList<>();
         approved.add("PREM");
@@ -114,9 +97,31 @@ public class ApplicationServicesTests {
 
         try {
             daouser.saveUserDetails(u);
-        } catch (PersistenceException ex) { 
+            assertTrue(u.getUsername().equals(daouser.getUserDetails(u.getUsername()).getUsername()));
+        } catch (PersistenceException ex) {
+            Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE,
+                    null, ex);
+        }
+    }
+    **/
+    @Test
+    public void nosaveUserDetails() {
+        User u = new User("David Leonardo Coronado", "1234567", 'E', "david.coronado@mail.escuelaing.edu.co","david.coronado", 2, 18); List<String> approved = new ArrayList<>();
+        approved.add("PREM");
+        approved.add("AGEO");
+        approved.add("FUME");
+        approved.add("INSI");
+        approved.add("ELBA");
+        approved.add("FCO1");
+
+        u.setApprovedSubjects(approved);
+
+        try {
+            daouser.saveUserDetails(u);
+        } catch (PersistenceException ex) {
             assertTrue(true);
-            Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE,
+                    null, ex);
         }
     }
 

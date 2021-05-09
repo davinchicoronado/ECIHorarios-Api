@@ -17,13 +17,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "Users")
 public class User {
 
-
-    
-      
-    
     @Id
     private String username;
-    private String id;
+    private String identification;
     private char tipo;
     private String email; 
     private int semester;
@@ -37,7 +33,7 @@ public class User {
     
     public User(String name, String id, char tipo, String email, String username, int semester, int limitCredits) {
         this.name = name;
-        this.id = id;
+        this.identification = id;
         this.tipo = tipo;
         this.email = email;
         this.username = username;
@@ -67,9 +63,7 @@ public class User {
         return name;
     }
 
-    public String getId() {
-        return id;
-    }
+  
 
     public char getTipo() {
         return tipo;
@@ -87,9 +81,7 @@ public class User {
         this.name = name;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+
 
     public void setTipo(char tipo) {
         this.tipo = tipo;
@@ -110,6 +102,15 @@ public class User {
     public void setApprovedSubjects(List<String> approvedSubjects) {
         this.approvedSubjects = approvedSubjects;
     }
+
+    public String getIdentification() {
+        return identification;
+    }
+
+    public void setIdentification(String identification) {
+        this.identification = identification;
+    }
+    
     
     
     

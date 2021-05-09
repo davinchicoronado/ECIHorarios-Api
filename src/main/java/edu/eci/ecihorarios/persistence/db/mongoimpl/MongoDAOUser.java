@@ -8,7 +8,7 @@ package edu.eci.ecihorarios.persistence.db.mongoimpl;
 import edu.eci.ecihorarios.model.bean.CredentialsUser;
 import edu.eci.ecihorarios.model.bean.User;
 import edu.eci.ecihorarios.persistence.db.DaoUser;
-import edu.eci.ecihorarios.persistence.db.PersistenceException;
+import edu.eci.ecihorarios.persistence.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -53,7 +53,7 @@ public class MongoDAOUser implements DaoUser {
         CredentialsUser u =  mongoTemplate.findOne(query, CredentialsUser.class);
         
         if(u!=null){
-            throw new PersistenceException("Error al registrar un nuevo usuario");
+            throw new PersistenceException("Usuario exsitente");
         
         }
         
@@ -62,7 +62,8 @@ public class MongoDAOUser implements DaoUser {
     }  
 
     @Override
-    public User getUserDetails(String username) throws PersistenceException {
+    public User getUserDetails(String username) throws PersistenceException { 
+        
         Query query = new Query(); 
         query.addCriteria(Criteria.where("_id").is(username));
         
@@ -82,7 +83,7 @@ public class MongoDAOUser implements DaoUser {
         User u =  mongoTemplate.findOne(query, User.class);
         
         if(u!=null){
-            throw new PersistenceException("Error al registrar los datos del usuario");
+            throw new PersistenceException("Detalles del usuario existentes");
         
         }
         mongoTemplate.save(user); 

@@ -5,6 +5,7 @@
  */
 package edu.eci.ecihorarios.persistence.db;
 
+import edu.eci.ecihorarios.persistence.PersistenceException;
 import edu.eci.ecihorarios.model.bean.CredentialsUser;
 import edu.eci.ecihorarios.model.bean.User;
 

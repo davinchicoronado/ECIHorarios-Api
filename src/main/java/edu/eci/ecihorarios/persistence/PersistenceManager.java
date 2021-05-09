@@ -25,22 +25,22 @@ import java.util.List;
 public interface PersistenceManager {
     
     
-    public boolean isLogin(String username, String password);
+   
     
     
     
-    public List<Subject> getAvailableSubjects(String username);
+    public List<Subject> getAvailableSubjects(String username) throws PersistenceException;
     
     
     
-    public List<Group> getSchedule(String nameSubject);
+    public List<Group> getSchedule(String nameSubject) throws PersistenceException;
     
     
     
-    public User getUser(String username);
+    public User getUser(String username) throws PersistenceException;
     
     
     
-    public void saveScheduleStudent(List<SubjectStudent> ss);
+    public void saveScheduleStudent(List<SubjectStudent> ss) throws PersistenceException;
     
 }

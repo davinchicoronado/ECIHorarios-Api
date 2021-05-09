@@ -7,7 +7,7 @@ package edu.eci.ecihorarios.services.impl;
 
 import edu.eci.ecihorarios.model.bean.CredentialsUser;
 import edu.eci.ecihorarios.persistence.db.DaoUser;
-import edu.eci.ecihorarios.persistence.db.PersistenceException;
+import edu.eci.ecihorarios.persistence.PersistenceException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;

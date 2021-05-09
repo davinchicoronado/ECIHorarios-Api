@@ -11,18 +11,20 @@ import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.model.bean.SubjectStudent;
 import edu.eci.ecihorarios.model.bean.User;
+import edu.eci.ecihorarios.persistence.PersistenceException;
 import edu.eci.ecihorarios.persistence.PersistenceManager;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
+
 
 /**
  *
  * @author David Coronado
- */
-@Service
+ */ 
+@Repository("persistenceManagerStub")
 public class PersistenceManagerStub implements PersistenceManager{
     
     private HashMap<String,String> passwords = new HashMap<>();
@@ -109,28 +111,15 @@ public class PersistenceManagerStub implements PersistenceManager{
         
         
     }
-    @Override
-    public boolean isLogin(String username, String password){
-        
-        if(passwords.containsKey(username)){
-            if(passwords.get(username).equals(password)){
-                return true;
-            }
-            else{
-                return false;
-            }
-        }
-        return false;
-    }
-    
+
     
     @Override
-    public List<Subject> getAvailableSubjects(String username){
+    public List<Subject> getAvailableSubjects(String username)throws PersistenceException{
         return availableSubject.get(username);
     }
     
     @Override
-    public List<Group> getSchedule(String nameSubject){
+    public List<Group> getSchedule(String nameSubject)throws PersistenceException{
         return schedules.get(nameSubject);
     }  
     
@@ -140,7 +129,7 @@ public class PersistenceManagerStub implements PersistenceManager{
     } 
     
     @Override
-    public void saveScheduleStudent(List<SubjectStudent> schedule){
+    public void saveScheduleStudent(List<SubjectStudent> schedule)throws PersistenceException{
         System.out.println(schedule.toString());
     }
 
