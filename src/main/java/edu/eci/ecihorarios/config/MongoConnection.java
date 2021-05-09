@@ -12,23 +12,37 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import com.mongodb.client.MongoClients;
 import org.springframework.context.annotation.Configuration;
 import com.mongodb.client.MongoClient;
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  *
  * @author David Coronado
- */ 
+ */
 @Configuration
-public class MongoConnection {
+public class MongoConnection { 
+    
+    @Autowired 
+    MongoClient mongoClient;
+    
 
     @Bean
-    public MongoTemplate mongoTemplate() {
+    public MongoClient mongoClient() {
         ConnectionString connString = new ConnectionString("mongodb+srv://ProjectEciHorarios:admin123@clusterecihorarios.gdwta.mongodb.net/ECIHorarios?w=majority");
         MongoClientSettings settings = MongoClientSettings.builder()
                 .applyConnectionString(connString)
                 .retryWrites(true)
                 .build(); 
         
-        MongoClient mongoClient = (MongoClient) MongoClients.create(settings); 
-        MongoTemplate mongoTemplate = new MongoTemplate(mongoClient,"ECIHorarios");
+        MongoClient mongoC = (MongoClient) MongoClients.create(settings);  
+        
+        return mongoC;
+      
+    }
+
+    @Bean
+    public MongoTemplate mongoTemplate() {
+
+        MongoTemplate mongoTemplate = new MongoTemplate(mongoClient, "ECIHorarios");
         return mongoTemplate;
 
     }
