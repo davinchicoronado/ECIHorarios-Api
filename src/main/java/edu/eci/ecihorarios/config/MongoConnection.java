@@ -22,7 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class MongoConnection { 
     
     @Autowired 
-    MongoClient mongoClient;
+    private MongoClient mongoClient;
     
 
     @Bean
