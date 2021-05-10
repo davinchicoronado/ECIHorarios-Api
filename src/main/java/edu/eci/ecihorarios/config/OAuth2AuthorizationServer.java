@@ -42,7 +42,7 @@ public class OAuth2AuthorizationServer extends AuthorizationServerConfigurerAdap
                 .authorities("ROLE_CLIENT", "ROLE_ADMIN")
                 .scopes("read", "write")
                 .autoApprove(true)
-                .secret(bcrypt.encode("client123")).accessTokenValiditySeconds(120).refreshTokenValiditySeconds(3600) ;
+                .secret(bcrypt.encode("client123")).accessTokenValiditySeconds(3600).refreshTokenValiditySeconds(4000) ;
                 
     } 
     

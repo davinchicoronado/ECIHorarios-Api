@@ -1,0 +1,144 @@
+----------------------Create DataBase---------------------
+use ECIHorarios 
+
+
+---------------------Create Collections--------------------
+
+db.createCollection("Users")
+db.createCollection("Credentials") 
+db.createCollection("Subjects")
+db.createCollection("Curriculum")
+
+-----------------------PoblarOk------------------------------- 
+----------------------CredentialsUser------------------------- 
+
+db.Credentials.insert({ "_id" : "apiclient", "password" : "$2a$10$.ISvQ72rmbp2q4NaSbbLnOY8rOT1/eqVOaLYDmyXfKHhSwhcMmCNq", "role" : "ADMIN", "_class" : "edu.eci.ecihorarios.model.bean.CredentialsUser" })  
+
+db.Credentials.insert({ "_id" : "david.coronado", "password" : "$2a$10$KzqaOYRc2Eu584/705MGXuxURGaYpAO7FA8E8xbLI1jHTCJjeSdVK", "role" : "USER", "_class" : "edu.eci.ecihorarios.model.bean.CredentialsUser" })  
+
+------------------------DetailsUser---------------------------- 
+
+db.Users.insert({ "_id" : "david.coronado", "identification" : "1234567", "tipo" : "E", "email" : "david.coronado@mail.escuelaing.edu.co", "semester" : 2, "limitCredits" : 18, "name" : "David Leonardo Coronado", "approvedSubjects" : [ "PREM", "AGEO", "FUME", "INSI", "ELBA", "FCO1" ], "_class" : "edu.eci.ecihorarios.model.bean.User","carrer" : "Ingenieria de Sistemas" })
+
+db.Users.insert({ "_id" : "apiclient", "identification" : "1234567", "tipo" : "A", "email" : "gerardo.sanchez@mail.escuelaing.edu.co", "name" : "Gerardo Sanchez", "carrer" : "Ingenieria de Sistemas", "_class" : "edu.eci.ecihorarios.model.bean.User" }) 
+
+
+-----------------------------DetailsSubjects---------------------------- 
+
+db.Subjects.insert({"_id":"AGEO", "name":"Analisis Geomatrico", "credits":4, "level":1}) 
+db.Subjects.insert({"_id":"PREM", "name":"Precalculo", "credits":4, "level":1})
+db.Subjects.insert({"_id":"FUME", "name":"Fundamentos de Mecanica", "credits":3, "level":1}) 
+db.Subjects.insert({"_id":"INSI", "name":"Introduccion a la Ingeniera de Sistemas", "credits":1, "level":1}) 
+db.Subjects.insert({"_id":"ELBA", "name":"Electiva de Bienestar Universitario", "credits":1, "level":1}) 
+db.Subjects.insert({"_id":"FCO1", "name":"Fundamentos de la comunicacion", "credits":2, "level":1}) 
+
+db.Subjects.insert({"_id":"CALD", "name":"Calculo Diferencial", "credits":4, "level":1}) 
+db.Subjects.insert({"_id":"ALLI", "name":"Algebra Lineal", "credits":3, "level":1}) 
+db.Subjects.insert({"_id":"MMIN", "name":"Modelos Matematicos para Informatica", "credits":3, "level":1})
+db.Subjects.insert({"_id":"FIME", "name":"Fisica Mecanica", "credits":4, "level":1})
+db.Subjects.insert({"_id":"HGCL", "name":"Historia y geografia de Colombia", "credits":2, "level":1}) 
+db.Subjects.insert({"_id":"FCO2", "name":"Fundamentos de la Comunicación", "credits":2, "level":1})
+
+
+db.Subjects.insert({"_id":"CALI", "name":"Calculo Integral", "credits":4, "level":1})
+db.Subjects.insert({"_id":"AYPR", "name":"Algoritmos y Programacion", "credits":3, "level":1})
+db.Subjects.insert({"_id":"EGR1", "name":"Expresion Grafica 1", "credits":3, "level":1})
+db.Subjects.insert({"_id":"LCAT", "name":"Logica Calculatoria", "credits":4, "level":1})
+db.Subjects.insert({"_id":"FIEM", "name":"Fisica del Electromagnetismo", "credits":4, "level":1})
+
+db.Subjects.insert({"_id":"CALV", "name":"Calculo Vectorial", "credits":4, "level":1}) 
+db.Subjects.insert({"_id":"AYED", "name":"Algoritmos y Estructuras de Datos", "credits":4, "level":2})
+db.Subjects.insert({"_id":"MATD", "name":"Matematicas Discretas", "credits":4, "level":2})
+db.Subjects.insert({"_id":"CYNT", "name":"Ciencias Naturales y Tecnologia", "credits":3, "level":2})
+db.Subjects.insert({"_id":"CIPP", "name":"Colombia: Realidad, Instituciones Politicas y Paz", "credits":2, "level":1})
+
+---------------------------Curriculum---------------------------- 
+db.Curriculum.insert(
+	{ "_id" : "Ingenieria de Sistemas" ,
+	  "list": [ {"code":"OGR1" , 
+			"prerequisites": ["SIML"]
+			},
+			{"code":"OGR2" ,
+				"prerequisites": ["SIML"]	
+			}, 
+			{"code":"ETO2"} ,
+			{"code":"ETO3"} ,
+			{"code":"SIML"} ,
+			{"code":"IETI",
+				"prerequisites": ["ARSW","AUPN"]
+			} 
+			{"code":"ETO1"}, 
+			{"code":"AREP" ,
+				"prerequisites": ["CVDS","AUPN","RECO"]
+			}, 
+			{"code":"FDGP",
+				"prerequisites": ["FCFI"]
+			},
+			{"code":"SPTI",
+				"prerequisites":["RECO"]
+			},
+			{"code":"ARSW",
+				"prerequisites":["RECO","CVDS"]
+			},
+			{"code":"ELH2",
+				"prerequisites":["CIPP"]
+			}, 
+			{"code":"FCFI",
+				"prerequisites":["FUEC"]
+			},
+			{"code":"IDI4",
+				"prerequisites":["IDI3"]
+			},
+			{"code":"RECO",
+				"prerequisites":["ACSO"]
+			}, 
+			{"code":"CVDS",
+				"prerequisites":["MBDA","POOB"]				
+			},
+			{"code":"AUPN",
+				"prerequisites":["TSOR","POOB"]
+			},
+			{"code":"ELH1", 
+				"prerequisites":["CIPP"]
+			}, 
+			{"code":"IDI3",
+				"prerequisites":["IDI2"]
+			}, 
+			{"code":"PRYE",
+				"prerequisites":["CALI"]
+			},
+			{"code":"ACSO",
+				"prerequisites":["FIEM"]				
+			},
+			{"code":"TSOR",
+				"prerequisites":["AYED"]				
+			}, 
+			{"code":"FUEC"},
+			{"code":"IDI2",
+				"prerequisites":["IDI1"]
+			}	
+	
+	  ]
+	}
+
+
+
+
+
+)
+
+
+
+
+---------------------------Delete Data---------------------------
+
+db.Users.remove({}) 
+db.Credentials.remove({}) 
+db.Subjects.remove({})
+db.Curriculum.remove({})
+---------------------------Delete Collections --------------------
+db.Users.drop()
+db.Credentials.drop()  
+db.Subjects.drop() 
+db.Curriculum.remove()
+

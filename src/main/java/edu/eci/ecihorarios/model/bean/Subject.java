@@ -4,22 +4,26 @@
  * and open the template in the editor.
  */
 package edu.eci.ecihorarios.model.bean;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  *
  * @author David Coronado
  */
+@Document(collection = "Subjects")
 public class Subject {
     
+    @Id
+    private String code;
     private String name;
     private int credits;
-    private String id;
     private int level;
 
     public Subject(String name,int credits,String id,int level){
         this.name=name;
         this.credits=credits;
-        this.id=id;
+        this.code=id;
         this.level=level;
     }
     
@@ -32,10 +36,13 @@ public class Subject {
         return credits;
     }
 
-    public String getId() {
-        return id;
+    public String getCode() {
+        return code;
     }
 
+    public void setCode(String code) {
+        this.code = code;
+    }
 
 
     public void setName(String name) {
@@ -46,9 +53,7 @@ public class Subject {
         this.credits = credits;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+
 
     public int getLevel() {
         return level;

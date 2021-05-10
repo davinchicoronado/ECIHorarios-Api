@@ -53,7 +53,7 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
             return pms.getUser(username);
         } catch (PersistenceException ex) {
             Logger.getLogger(ECIHorariosServicesImpl.class.getName()).log(Level.SEVERE, null, ex); 
-            throw new ServicesException(ex.getMessage(),ex);
+            throw new ServicesException("No se pudo consultar los detalles del usuario: "+username,ex);
         }
     }
     

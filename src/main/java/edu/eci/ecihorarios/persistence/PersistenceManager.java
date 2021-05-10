@@ -6,14 +6,11 @@
 package edu.eci.ecihorarios.persistence;
 
 
-import edu.eci.ecihorarios.model.bean.ClassSchedule;
+
 import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.model.bean.SubjectStudent;
 import edu.eci.ecihorarios.model.bean.User;
-import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 
@@ -24,11 +21,8 @@ import java.util.List;
 
 public interface PersistenceManager {
     
-    
-   
-    
-    
-    
+ 
+     
     public List<Subject> getAvailableSubjects(String username) throws PersistenceException;
     
     
