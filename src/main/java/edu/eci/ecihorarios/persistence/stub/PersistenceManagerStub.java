@@ -7,6 +7,7 @@ package edu.eci.ecihorarios.persistence.stub;
 
 
 import edu.eci.ecihorarios.model.bean.ClassSchedule;
+import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.model.bean.SubjectStudent;
@@ -131,6 +132,11 @@ public class PersistenceManagerStub implements PersistenceManager{
     @Override
     public void saveScheduleStudent(List<SubjectStudent> schedule)throws PersistenceException{
         System.out.println(schedule.toString());
+    }
+
+    @Override
+    public Curriculum getCurriculum(String carrer) throws PersistenceException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 

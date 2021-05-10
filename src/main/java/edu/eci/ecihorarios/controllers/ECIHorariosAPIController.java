@@ -47,6 +47,17 @@ public class ECIHorariosAPIController {
         }        
     }
     
+    @RequestMapping(path ="/curriculum/{name}",method = RequestMethod.GET)
+    public ResponseEntity<?> getCurriculum(@PathVariable ("name") String name){
+       
+        try {
+            return new ResponseEntity<>(ecih.getCurriculum(name),HttpStatus.ACCEPTED);
+        } catch (ServicesException ex) {
+            Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
+        }        
+    }
+    
     
     @RequestMapping(path ="/subjects/{username}",method = RequestMethod.GET)
     public ResponseEntity<?> availableSubjects(@PathVariable ("username") String username){

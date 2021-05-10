@@ -66,7 +66,7 @@ db.Curriculum.insert(
 			{"code":"SIML"} ,
 			{"code":"IETI",
 				"prerequisites": ["ARSW","AUPN"]
-			} 
+			}, 
 			{"code":"ETO1"}, 
 			{"code":"AREP" ,
 				"prerequisites": ["CVDS","AUPN","RECO"]
@@ -116,15 +116,74 @@ db.Curriculum.insert(
 			{"code":"FUEC"},
 			{"code":"IDI2",
 				"prerequisites":["IDI1"]
-			}	
-	
+			}, 
+			{"code":"ECDI",
+				"prerequisites":["CALV"]
+			}, 
+			{"code":"MBDA",
+				"prerequisites":["AYPR","LCAT"]
+			},
+			{"code":"TPRO",
+				"prerequisites":["MATD"]
+			},
+			{"code":"POOB",
+				"prerequisites":["AYED"]
+			},
+			{"code":"IDI1"},
+			{"code":"CALV",
+				"prerequisites":["CALI","ALLI"]
+			},
+			{"code":"AYED",
+				"prerequisites":["AYPR","LCAT"]
+			},
+			{"code":"MATD",
+				"prerequisites":["LCAT"]
+			},
+			{"code":"CYNT",
+				"prerequisites":["FIME"]
+				
+			},
+			{"code":"CIPP",
+				"prerequisites":["HGCL"]
+			},
+			{"code":"CALI",
+				"prerequisites":["CALD"]
+			},
+			{"code":"AYPR",
+				"prerequisites":["ALLI"]
+			},
+			{"code":"EGR1",
+				"prerequisites":["AGEO"]
+			},
+			{"code":"LCAT",
+				"prerequisites":["MMIN"]
+			},
+			{"code":"FIEM",
+				"prerequisites":["CALD","FIME"]
+			},
+			{"code":"CALD",
+				"prerequisites":["PREM","AGEO"]
+				
+			}, 
+			{"code":"ALLI",
+				"prerequisites":["PREM","AGEO"]
+			},
+			{"code":"MMIN"},
+			{"code":"FIME",
+				"prerequisites":["FUME"]
+			}, 
+			{"code":"HGCL"},
+			{"code":"FCO2", 
+				"prerequisites":["FCO1"]
+			},
+			{"code":"PREM"},
+			{"code":"AGEO"},
+			{"code":"FUME"},
+			{"code":"INSI"}, 
+			{"code":"ELBA"}, 
+			{"code":"FCO1"}
 	  ]
 	}
-
-
-
-
-
 )
 
 

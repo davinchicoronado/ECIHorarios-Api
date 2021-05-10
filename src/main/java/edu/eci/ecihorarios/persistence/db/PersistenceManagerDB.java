@@ -5,6 +5,7 @@
  */
 package edu.eci.ecihorarios.persistence.db;
 
+import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.model.bean.SubjectStudent;
@@ -27,7 +28,10 @@ public class PersistenceManagerDB implements PersistenceManager {
     
     
     @Autowired 
-    DaoUser daoUser;
+    DaoUser daoUser; 
+    
+    @Autowired 
+    DaoSubject daoSubject;
 
     @Override
     public List<Subject> getAvailableSubjects(String username) throws PersistenceException {
@@ -47,6 +51,11 @@ public class PersistenceManagerDB implements PersistenceManager {
     @Override
     public void saveScheduleStudent(List<SubjectStudent> ss) throws PersistenceException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Curriculum getCurriculum(String carrer) throws PersistenceException {
+        return daoSubject.getCurriculum(carrer);
     }
     
 

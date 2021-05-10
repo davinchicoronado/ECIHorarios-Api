@@ -7,6 +7,7 @@ package edu.eci.ecihorarios.persistence;
 
 
 
+import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.model.bean.SubjectStudent;
@@ -27,7 +28,9 @@ public interface PersistenceManager {
     
     
     
+    
     public List<Group> getSchedule(String nameSubject) throws PersistenceException;
+    
     
     
     
@@ -35,6 +38,11 @@ public interface PersistenceManager {
     
     
     
-    public void saveScheduleStudent(List<SubjectStudent> ss) throws PersistenceException;
+    
+    public void saveScheduleStudent(List<SubjectStudent> ss) throws PersistenceException; 
+    
+    
+    
+    public Curriculum getCurriculum(String carrer) throws PersistenceException;
     
 }

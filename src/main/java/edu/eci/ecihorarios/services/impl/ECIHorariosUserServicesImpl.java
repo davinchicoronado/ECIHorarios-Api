@@ -30,10 +30,7 @@ import org.springframework.stereotype.Service;
 @Service
 //@ImportResource("applicationContext.xml") 
 public class ECIHorariosUserServicesImpl implements UserDetailsService{ 
-    
-    BCryptPasswordEncoder encoder;
-    
-    
+
     @Autowired 
     private DaoUser daouser;
 

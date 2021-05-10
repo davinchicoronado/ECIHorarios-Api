@@ -6,6 +6,7 @@
 package edu.eci.ecihorarios.services.impl;
 
 import edu.eci.ecihorarios.cache.ECIHorariosCache;
+import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.model.bean.SubjectStudent;
@@ -47,8 +48,7 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
 
     @Override
     public User getUser(String username) throws ServicesException {
-        
-        
+    
         try {
             return pms.getUser(username);
         } catch (PersistenceException ex) {
@@ -61,6 +61,16 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
     @Override
     public void saveScheduleStudent(List<SubjectStudent> ss) throws ServicesException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Curriculum getCurriculum(String carrer) throws ServicesException {
+        try {
+            return pms.getCurriculum(carrer);
+        } catch (PersistenceException ex) {
+            Logger.getLogger(ECIHorariosServicesImpl.class.getName()).log(Level.SEVERE, null, ex); 
+            throw new ServicesException("No se pudo consultar el plan de estudios de la carrera: "+carrer,ex);
+        }
     }
       
     
