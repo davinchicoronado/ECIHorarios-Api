@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.ecihorarios.cache;
+package edu.eci.ecihorarios.cachestub;
 import edu.eci.ecihorarios.model.bean.Subject;
 import java.time.LocalTime;
 import java.util.List;

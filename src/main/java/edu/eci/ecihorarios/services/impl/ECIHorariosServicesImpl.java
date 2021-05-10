@@ -5,7 +5,7 @@
  */
 package edu.eci.ecihorarios.services.impl;
 
-import edu.eci.ecihorarios.cache.ECIHorariosCache;
+import edu.eci.ecihorarios.cachestub.ECIHorariosCache;
 import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.model.bean.Subject;
