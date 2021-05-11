@@ -25,4 +25,5 @@ public interface DaoUser {
     public void saveUserDetails(User user) throws PersistenceException;
     
     
+    
 }

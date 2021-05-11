@@ -43,6 +43,8 @@ public interface PersistenceManager {
     
     
     
-    public Curriculum getCurriculum(String carrer) throws PersistenceException;
+    public Curriculum getCurriculum(String carrer) throws PersistenceException; 
     
+    
+    public Subject getSubject(String code) throws PersistenceException;
 }

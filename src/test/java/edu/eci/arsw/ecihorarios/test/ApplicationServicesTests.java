@@ -3,6 +3,7 @@ package edu.eci.arsw.ecihorarios.test;
 import edu.eci.ecihorarios.config.MongoConnection;
 import edu.eci.ecihorarios.model.bean.CredentialsUser;
 import edu.eci.ecihorarios.model.bean.Curriculum;
+import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.model.bean.User;
 import edu.eci.ecihorarios.persistence.db.DaoUser;
 import edu.eci.ecihorarios.persistence.PersistenceException;
@@ -146,6 +147,29 @@ public class ApplicationServicesTests {
             Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);
         }
     
+    } 
+    
+    @Test 
+    public void getSubject(){
+        
+        try {
+            Subject sub = daosubject.getSubject("AGEO");  
+            String value = "Subject{" + "code=" + "AGEO" + ", name=" + "Analisis Geomatrico" + ", credits=" + 4 + ", level=" + 1 + "}";
+            assertTrue(value.equals(sub.toString()));       
+        } catch (PersistenceException ex) {
+            Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    } 
+    @Test 
+    public void nogetSubject(){
+        
+        try {
+            Subject sub = daosubject.getSubject("PPPP");        
+        } catch (PersistenceException ex) { 
+            assertTrue(true);
+            Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex); 
+            
+        }
     }
     
 }

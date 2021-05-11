@@ -6,6 +6,7 @@
 package edu.eci.ecihorarios.persistence.db;
 
 import edu.eci.ecihorarios.model.bean.Curriculum;
+import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.persistence.PersistenceException;
 
 /**
@@ -15,5 +16,8 @@ import edu.eci.ecihorarios.persistence.PersistenceException;
 public interface DaoSubject {
     
     public Curriculum getCurriculum(String carrer) throws PersistenceException; 
+    
+    public Subject getSubject(String code) throws PersistenceException;
+    
     
 }

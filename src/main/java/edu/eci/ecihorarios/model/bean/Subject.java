@@ -20,6 +20,9 @@ public class Subject {
     private int credits;
     private int level;
 
+    public Subject(){
+    }
+    
     public Subject(String name,int credits,String id,int level){
         this.name=name;
         this.credits=credits;
@@ -61,6 +64,11 @@ public class Subject {
 
     public void setLevel(int level) {
         this.level = level;
+    }
+
+    @Override
+    public String toString() {
+        return "Subject{" + "code=" + code + ", name=" + name + ", credits=" + credits + ", level=" + level + "}";
     }
     
     

@@ -57,6 +57,11 @@ public class PersistenceManagerDB implements PersistenceManager {
     public Curriculum getCurriculum(String carrer) throws PersistenceException {
         return daoSubject.getCurriculum(carrer);
     }
+
+    @Override
+    public Subject getSubject(String code) throws PersistenceException {
+        return daoSubject.getSubject(code);
+    }
     
 
 

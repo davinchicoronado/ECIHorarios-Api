@@ -65,5 +65,11 @@ public interface ECIHorariosServices {
     public Curriculum getCurriculum(String carrer) throws ServicesException;
     
     
-    
+      /**
+     * Metodo que permite consultar los detalles de una asignatura
+     * @param code codigo de la asignatura
+     * @return  Detalle de la asignatura
+     * @throws edu.eci.ecihorarios.services.ServicesException 
+     */ 
+    public Subject getSubject(String code) throws ServicesException;
 }

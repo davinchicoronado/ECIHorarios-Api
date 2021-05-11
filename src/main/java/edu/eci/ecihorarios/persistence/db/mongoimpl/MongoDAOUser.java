@@ -53,7 +53,7 @@ public class MongoDAOUser implements DaoUser {
         CredentialsUser u =  mongoTemplate.findOne(query, CredentialsUser.class);
         
         if(u!=null){
-            throw new PersistenceException("Usuario exsitente");
+            throw new PersistenceException("Usuario exsistente");
         
         }
         

@@ -72,6 +72,16 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
             throw new ServicesException("No se pudo consultar el plan de estudios de la carrera: "+carrer,ex);
         }
     }
+
+    @Override
+    public Subject getSubject(String code) throws ServicesException {
+        try {
+            return pms.getSubject(code);
+        } catch (PersistenceException ex) {
+            Logger.getLogger(ECIHorariosServicesImpl.class.getName()).log(Level.SEVERE, null, ex); 
+            throw new ServicesException("No se pudo consultar la asignatura: "+code,ex);
+        }
+    }
       
     
 

@@ -59,12 +59,11 @@ public class ECIHorariosAPIController {
     }
     
     
-    @RequestMapping(path ="/subjects/{username}",method = RequestMethod.GET)
-    public ResponseEntity<?> availableSubjects(@PathVariable ("username") String username){
+    @RequestMapping(path ="/subject/{code}",method = RequestMethod.GET)
+    public ResponseEntity<?> availableSubjects(@PathVariable ("code") String code){
        
-        try { 
-          
-            return new ResponseEntity<>(ecih.getAvailableSubjects(username),HttpStatus.ACCEPTED);
+        try {      
+            return new ResponseEntity<>(ecih.getSubject(code),HttpStatus.ACCEPTED);
         } catch (ServicesException ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
