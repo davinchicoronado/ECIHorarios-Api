@@ -35,7 +35,14 @@ public class PersistenceManagerDB implements PersistenceManager {
 
     @Override
     public List<Subject> getAvailableSubjects(String username) throws PersistenceException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        User us = daoUser.getUserDetails(username);
+        
+        Curriculum curl = daoSubject.getCurriculum(us.getCarrer());
+        
+        
+        
+        return null;
     }
 
     @Override

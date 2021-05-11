@@ -9,7 +9,9 @@ package edu.eci.ecihorarios.services;
  *
  * @author David Coronado
  */
-public class ServicesException extends Exception{
+public class ServicesException extends Exception{ 
+    
+    
     public ServicesException(String message) {
         super(message);
     }
