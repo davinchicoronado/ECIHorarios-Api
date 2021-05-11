@@ -8,7 +8,6 @@ import edu.eci.ecihorarios.model.bean.User;
 import edu.eci.ecihorarios.persistence.db.DaoUser;
 import edu.eci.ecihorarios.persistence.PersistenceException;
 import edu.eci.ecihorarios.persistence.PersistenceManager;
-import edu.eci.ecihorarios.persistence.db.DaoSubject;
 import edu.eci.ecihorarios.persistence.db.PersistenceManagerDB;
 import edu.eci.ecihorarios.persistence.db.mongoimpl.MongoDAOSubject;
 import edu.eci.ecihorarios.persistence.db.mongoimpl.MongoDAOUser;
@@ -183,4 +182,23 @@ public class ApplicationServicesTests {
         }
     }
 
+    @Test 
+    public void getAvailableSubject(){
+        try { 
+            String value = "[Subject{code=EGR1, name=Expresion Grafica 1, credits=3, level=1}, Subject{code=CALD, name=Calculo Diferencial, credits=4, level=1}, Subject{code=ALLI, name=Algebra Lineal, credits=3, level=1}, Subject{code=FIME, name=Fisica Mecanica, credits=4, level=1}, Subject{code=FCO2, name=Fundamentos de la Comunicación, credits=2, level=1}]";
+            assertTrue(value.equals(pm.getAvailableSubjects("david.coronado").toString()));
+        } catch (PersistenceException ex) {
+            Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+    } 
+    @Test 
+    public void nogetAvailableSubject(){
+        try {
+            pm.getAvailableSubjects("pepito.perez"); 
+        } catch (PersistenceException ex) {
+            Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+    }
 }

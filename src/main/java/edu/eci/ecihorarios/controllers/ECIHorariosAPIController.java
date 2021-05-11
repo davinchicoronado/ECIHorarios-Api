@@ -60,10 +60,20 @@ public class ECIHorariosAPIController {
     
     
     @RequestMapping(path ="/subject/{code}",method = RequestMethod.GET)
-    public ResponseEntity<?> availableSubjects(@PathVariable ("code") String code){
+    public ResponseEntity<?> getDetailsSubjects(@PathVariable ("code") String code){
        
         try {      
             return new ResponseEntity<>(ecih.getSubject(code),HttpStatus.ACCEPTED);
+        } catch (ServicesException ex) {
+            Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
+        }        
+    }  
+    @RequestMapping(path ="/availablesubject/{username}",method = RequestMethod.GET)
+    public ResponseEntity<?> availableSubjects(@PathVariable ("username") String username){
+       
+        try {      
+            return new ResponseEntity<>(ecih.getAvailableSubjects(username),HttpStatus.ACCEPTED);
         } catch (ServicesException ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);

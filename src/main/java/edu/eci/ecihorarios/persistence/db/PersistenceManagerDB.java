@@ -7,11 +7,13 @@ package edu.eci.ecihorarios.persistence.db;
 
 import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Group;
+import edu.eci.ecihorarios.model.bean.NodeSubject;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.model.bean.SubjectStudent;
 import edu.eci.ecihorarios.model.bean.User;
 import edu.eci.ecihorarios.persistence.PersistenceException;
 import edu.eci.ecihorarios.persistence.PersistenceManager;
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -36,13 +38,26 @@ public class PersistenceManagerDB implements PersistenceManager {
     @Override
     public List<Subject> getAvailableSubjects(String username) throws PersistenceException {
         
+       
+        List<Subject> list = new ArrayList<>();
         User us = daoUser.getUserDetails(username);
+        List<String>approved = us.getApprovedSubjects();
+        Curriculum curl = daoSubject.getCurriculum(us.getCarrer()); 
+   
+        Subject sb;
+        String code;
+        for(NodeSubject nd : curl.getList()){ 
+            code = nd.getCode(); 
+            if(nd.getPrerequisites()!=null){
+                if(approved.containsAll(nd.getPrerequisites())){
+                    sb = daoSubject.getSubject(code);
+                    list.add(sb);
+                }
+            }
+        }
         
-        Curriculum curl = daoSubject.getCurriculum(us.getCarrer());
         
-        
-        
-        return null;
+        return list;
     }
 
     @Override

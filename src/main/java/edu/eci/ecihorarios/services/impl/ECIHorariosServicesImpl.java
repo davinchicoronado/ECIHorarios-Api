@@ -38,7 +38,13 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
 
     @Override
     public List<Subject> getAvailableSubjects(String username) throws ServicesException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            return pms.getAvailableSubjects(username);
+        } catch (PersistenceException ex) {
+            Logger.getLogger(ECIHorariosServicesImpl.class.getName()).log(Level.SEVERE, null, ex); 
+            throw new ServicesException("No se pudo consultar las asignaturas disponibles del usuario: "+username,ex);
+        }
+        
     }
 
     @Override

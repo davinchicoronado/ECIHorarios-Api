@@ -71,5 +71,6 @@ public interface ECIHorariosServices {
      * @return  Detalle de la asignatura
      * @throws edu.eci.ecihorarios.services.ServicesException 
      */ 
-    public Subject getSubject(String code) throws ServicesException;
+    public Subject getSubject(String code) throws ServicesException; 
+    
 }
