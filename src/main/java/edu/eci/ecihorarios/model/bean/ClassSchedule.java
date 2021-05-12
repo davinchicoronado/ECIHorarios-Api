@@ -10,9 +10,12 @@ package edu.eci.ecihorarios.model.bean;
  */
 public class ClassSchedule {
     
+    
     private String hour;
     private String classRoom;
-    private String day;
+    private String day; 
+    
+    public ClassSchedule(){}
     
     public ClassSchedule(String hour,String day,String classRoom){
         this.hour=hour;
@@ -42,6 +45,11 @@ public class ClassSchedule {
 
     public void setDay(String day) {
         this.day = day;
+    }
+
+    @Override
+    public String toString() {
+        return "ClassSchedule{" + "hour=" + hour + ", classRoom=" + classRoom + ", day=" + day + "}";
     }
     
     

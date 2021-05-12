@@ -6,9 +6,11 @@
 package edu.eci.ecihorarios.persistence.db.mongoimpl;
 
 import edu.eci.ecihorarios.model.bean.Curriculum;
+import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.persistence.PersistenceException;
 import edu.eci.ecihorarios.persistence.db.DaoSubject;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -28,14 +30,17 @@ public class MongoDAOSubject implements DaoSubject {
     @Override
     public Curriculum getCurriculum(String carrer) throws PersistenceException {
         Query query = new Query();
+        
         query.addCriteria(Criteria.where("_id").is(carrer));
-
-        Curriculum cur = mongoTemplate.findOne(query, Curriculum.class);
+        
+        Curriculum cur = mongoTemplate.findOne(query, Curriculum.class); 
+        
 
         if (cur == null) {
             throw new PersistenceException("Error no se encontro el plan de estudios de la carrera: " + carrer);
         }
-
+        Criteria i = new Criteria();
+       
         return cur;
     }
 
@@ -51,6 +56,24 @@ public class MongoDAOSubject implements DaoSubject {
         }
 
         return sub;
+    }
+
+    @Override
+    public List<Group> getGroups(String code) throws PersistenceException {
+        Query query = new Query(); 
+        query.fields().include("teacher"); 
+        query.fields().include("numGroup");
+        query.fields().include("lessons");
+        query.fields().include("limit");
+        query.fields().include("code"); 
+        query.addCriteria(Criteria.where("code").is(code)); 
+        
+        List<Group> groups = mongoTemplate.find(query, Group.class);  
+        if(groups==null){
+            throw new PersistenceException("Error no se encontraron registros de la asignatura : " + code);
+        }
+        
+        return groups;
     }
 
 }

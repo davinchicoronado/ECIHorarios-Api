@@ -6,8 +6,10 @@
 package edu.eci.ecihorarios.persistence.db;
 
 import edu.eci.ecihorarios.model.bean.Curriculum;
+import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.persistence.PersistenceException;
+import java.util.List;
 
 /**
  *
@@ -19,5 +21,6 @@ public interface DaoSubject {
     
     public Subject getSubject(String code) throws PersistenceException;
     
+    public List<Group> getGroups(String code) throws PersistenceException;
     
 }

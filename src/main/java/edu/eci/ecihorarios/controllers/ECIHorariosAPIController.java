@@ -84,7 +84,7 @@ public class ECIHorariosAPIController {
     public ResponseEntity<?> schedule(@PathVariable ("subjectid") String subjectid){
        
         try { 
-          
+            
             return new ResponseEntity<>(ecih.getSchedule(subjectid),HttpStatus.ACCEPTED);
         } catch (ServicesException ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);

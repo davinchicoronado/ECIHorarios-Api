@@ -29,7 +29,7 @@ public interface PersistenceManager {
     
     
     
-    public List<Group> getSchedule(String nameSubject) throws PersistenceException;
+    public List<Group> getSchedule(String codeSubject) throws PersistenceException;
     
     
     

@@ -6,18 +6,25 @@
 package edu.eci.ecihorarios.model.bean;
 
 import java.util.List;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  *
  * @author David Coronado
- */
+ */ 
+@Document(collection = "Schedules")
 public class Group {
     
     private String teacher;
     private int numGroup;
     private List<ClassSchedule> lessons; 
     private int limit;
-
+    private String code;
+    
+    
+    public Group(){
+    
+    }
     
     public Group(String teacher,int numGroup, int limit){
         this.teacher=teacher;
@@ -58,5 +65,20 @@ public class Group {
     public void setLimit(int limit) {
         this.limit = limit;
     }
-  
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    @Override
+    public String toString() {
+        return "Group{" + "teacher=" + teacher + ", numGroup=" + numGroup + ", lessons=" + lessons + ", limit=" + limit + ", code=" + code + '}';
+    }
+    
+    
+    
 }
