@@ -205,7 +205,7 @@ public class ApplicationServicesTests {
     public void getScheduleSubject(){
     
         try { 
-            String value = "[Group{teacher=Edwin Perez, numGroup=1, lessons=[ClassSchedule{hour=10:00, classRoom=F-202, day=Lunes}, ClassSchedule{hour=10:00, classRoom=F-202, day=Martes}, ClassSchedule{hour=10:00, classRoom=C-102, day=Miercoles}], limit=25, code=CALD}]";
+            String value = "[Group{teacher=Edwin Perez, numGroup=1, lessons=[ClassSchedule{hour=10:00, classRoom=F-202, day=Lunes}, ClassSchedule{hour=10:00, classRoom=F-202, day=Martes}, ClassSchedule{hour=10:00, classRoom=C-102, day=Miercoles}], limit=25}]";
             assertTrue(value.equals(pm.getSchedule("CALD").toString()));
         } catch (PersistenceException ex) {
             Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);

@@ -189,7 +189,25 @@ db.Curriculum.insert(
 
 -------------------------Schedules------------------------------- 
 
-db.Schedules.insert({"teacher":"Edwin Perez", "numGroup":1, "lessons": [{"hour":"10:00","classRoom":"F-202","day":"Lunes"} ,{"hour":"10:00","classRoom":"F-202","day":"Martes"},{"hour":"10:00","classRoom":"C-102","day":"Miercoles"} ],"limit":25 , "code":"CALD" }) 
+db.Schedules.insert({"teacher":"Edwin Perez", "numGroup":1, "lessons": [{"hour":"10:00","classRoom":"F-202","day":"Lunes"} ,{"hour":"10:00","classRoom":"F-202","day":"Martes"},{"hour":"10:00","classRoom":"C-102","day":"Miercoles"} ],"limit":25 , "code":"CALD" })  
+db.Schedules.insert({"teacher":"Edwin Perez", "numGroup":2, "lessons": [{"hour":"11:30","classRoom":"G-202","day":"Lunes"} ,{"hour":"11:30","classRoom":"G-202","day":"Martes"},{"hour":"11:30","classRoom":"C-103","day":"Miercoles"} ],"limit":25 , "code":"CALD" }) 
+db.Schedules.insert({"teacher":"Marta Salazar", "numGroup":3, "lessons": [{"hour":"11:30","classRoom":"A-202","day":"Lunes"} ,{"hour":"11:30","classRoom":"H-202","day":"Martes"},{"hour":"11:30","classRoom":"C-103","day":"Jueves"} ],"limit":20 , "code":"CALD" }) 
+db.Schedules.insert({"teacher":"Carlos Parra", "numGroup":4, "lessons": [{"hour":"8:30","classRoom":"D-202","day":"Lunes"} ,{"hour":"8:30","classRoom":"C-202","day":"Martes"},{"hour":"13:00","classRoom":"D-103","day":"Jueves"} ],"limit":20 , "code":"CALD" }) 
+
+db.Schedules.insert({"teacher":"Carlos Benavides", "numGroup":1, "lessons": [{"hour":"14:30","classRoom":"F-102","day":"Lunes"} ,{"hour":"14:30","classRoom":"F-102","day":"Viernes"}],"limit":15 , "code":"EGR1" })
+db.Schedules.insert({"teacher":"Carlos Benavides", "numGroup":2, "lessons": [{"hour":"16:00","classRoom":"C-102","day":"Lunes"} ,{"hour":"16:00","classRoom":"H-102","day":"Viernes"}],"limit":20 , "code":"EGR1" })
+db.Schedules.insert({"teacher":"Patricia Salazar", "numGroup":3, "lessons": [{"hour":"14:30","classRoom":"D-102","day":"Lunes"} ,{"hour":"14:30","classRoom":"C-102","day":"Viernes"}],"limit":15 , "code":"EGR1" })
+db.Schedules.insert({"teacher":"Cladia Lopez", "numGroup":4, "lessons": [{"hour":"7:00","classRoom":"F-302","day":"Lunes"} ,{"hour":"7:00","classRoom":"F-302","day":"Viernes"}],"limit":15 , "code":"EGR1" })
+
+db.Schedules.insert({"teacher":"Leopoldo Atienza", "numGroup":1, "lessons": [{"hour":"17:30","classRoom":"A-102","day":"Miercoles"} ,{"hour":"17:30","classRoom":"D-102","day":"Jueves"},{"hour":"17:30","classRoom":"F-102","day":"Viernes"}],"limit":27 , "code":"ALLI" })
+db.Schedules.insert({"teacher":"Leopoldo Atienza", "numGroup":2, "lessons": [{"hour":"8:30","classRoom":"A-102","day":"Miercoles"} ,{"hour":"8:30","classRoom":"D-102","day":"Jueves"},{"hour":"8:30","classRoom":"F-102","day":"Viernes"}],"limit":0 , "code":"ALLI" })
+db.Schedules.insert({"teacher":"Rebeca Escudero", "numGroup":3, "lessons": [{"hour":"11:30","classRoom":"A-102","day":"Miercoles"} ,{"hour":"11:30","classRoom":"D-102","day":"Jueves"},{"hour":"11:30","classRoom":"F-102","day":"Viernes"}],"limit":20 , "code":"ALLI" }) 
+
+db.Schedules.insert({"teacher":"Lidia Martínez", "numGroup":1, "lessons": [{"hour":"17:30","classRoom":"B-102","day":"Miercoles"} ,{"hour":"17:30","classRoom":"B-102","day":"Jueves"},{"hour":"17:30","classRoom":"B-102","day":"Viernes"}],"limit":25 , "code":"FIME" })
+db.Schedules.insert({"teacher":"Lidia Martínez", "numGroup":2, "lessons": [{"hour":"8:30","classRoom":"B-102","day":"Miercoles"} ,{"hour":"8:30","classRoom":"B-102","day":"Jueves"},{"hour":"8:30","classRoom":"B-102","day":"Viernes"}],"limit":20 , "code":"FIME" })
+db.Schedules.insert({"teacher":"Javi Cardona", "numGroup":3, "lessons": [{"hour":"11:30","classRoom":"D-302","day":"Lunes"} ,{"hour":"8:30","classRoom":"D-102","day":"Martes"},{"hour":"8:30","classRoom":"D-102","day":"Viernes"}],"limit":30 , "code":"FIME" })
+
+db.Schedules.insert({"teacher":"Pedro Pérez", "numGroup":1, "lessons": [{"hour":"11:30","classRoom":"B-102","day":"Miercoles"} ,{"hour":"11:30","classRoom":"B-102","day":"Jueves"}],"limit":25 , "code":"FCO2" })
 
 
 

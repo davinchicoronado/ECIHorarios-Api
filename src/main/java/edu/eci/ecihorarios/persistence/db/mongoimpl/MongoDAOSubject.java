@@ -64,8 +64,7 @@ public class MongoDAOSubject implements DaoSubject {
         query.fields().include("teacher"); 
         query.fields().include("numGroup");
         query.fields().include("lessons");
-        query.fields().include("limit");
-        query.fields().include("code"); 
+        query.fields().include("limit"); 
         query.addCriteria(Criteria.where("code").is(code)); 
         
         List<Group> groups = mongoTemplate.find(query, Group.class);  

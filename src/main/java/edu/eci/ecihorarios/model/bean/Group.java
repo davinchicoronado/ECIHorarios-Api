@@ -19,7 +19,7 @@ public class Group {
     private int numGroup;
     private List<ClassSchedule> lessons; 
     private int limit;
-    private String code;
+    
     
     
     public Group(){
@@ -66,18 +66,15 @@ public class Group {
         this.limit = limit;
     }
 
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
     @Override
     public String toString() {
-        return "Group{" + "teacher=" + teacher + ", numGroup=" + numGroup + ", lessons=" + lessons + ", limit=" + limit + ", code=" + code + '}';
+        return "Group{" + "teacher=" + teacher + ", numGroup=" + numGroup + ", lessons=" + lessons + ", limit=" + limit + "}";
     }
+
+
+    
+
+
     
     
     

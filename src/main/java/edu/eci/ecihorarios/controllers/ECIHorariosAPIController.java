@@ -6,6 +6,7 @@
 package edu.eci.ecihorarios.controllers;
 
 import edu.eci.ecihorarios.model.bean.SubjectStudent;
+import edu.eci.ecihorarios.model.error.ObjectError;
 import edu.eci.ecihorarios.services.ECIHorariosServices;
 import edu.eci.ecihorarios.services.ServicesException;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
+//import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,7 +44,7 @@ public class ECIHorariosAPIController {
             return new ResponseEntity<>(ecih.getUser(username),HttpStatus.ACCEPTED);
         } catch (ServicesException ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()),HttpStatus.NOT_FOUND);
         }        
     }
     
@@ -54,7 +55,7 @@ public class ECIHorariosAPIController {
             return new ResponseEntity<>(ecih.getCurriculum(name),HttpStatus.ACCEPTED);
         } catch (ServicesException ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()),HttpStatus.NOT_FOUND);
         }        
     }
     
@@ -66,7 +67,7 @@ public class ECIHorariosAPIController {
             return new ResponseEntity<>(ecih.getSubject(code),HttpStatus.ACCEPTED);
         } catch (ServicesException ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()),HttpStatus.NOT_FOUND);
         }        
     }  
     @RequestMapping(path ="/availablesubject/{username}",method = RequestMethod.GET)
@@ -76,7 +77,7 @@ public class ECIHorariosAPIController {
             return new ResponseEntity<>(ecih.getAvailableSubjects(username),HttpStatus.ACCEPTED);
         } catch (ServicesException ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()),HttpStatus.NOT_FOUND);
         }        
     } 
     
@@ -88,7 +89,7 @@ public class ECIHorariosAPIController {
             return new ResponseEntity<>(ecih.getSchedule(subjectid),HttpStatus.ACCEPTED);
         } catch (ServicesException ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()),HttpStatus.NOT_FOUND);
         }        
     } 
     
@@ -100,7 +101,7 @@ public class ECIHorariosAPIController {
            return new ResponseEntity<>(HttpStatus.CREATED);      
         } catch (ServicesException ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()),HttpStatus.NOT_FOUND);
         }        
     }  
     
