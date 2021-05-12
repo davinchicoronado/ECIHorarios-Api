@@ -69,7 +69,7 @@ public class MongoDAOSubject implements DaoSubject {
         query.addCriteria(Criteria.where("code").is(code)); 
         
         List<Group> groups = mongoTemplate.find(query, Group.class);  
-        if(groups==null){
+        if(groups.isEmpty()){
             throw new PersistenceException("Error no se encontraron registros de la asignatura : " + code);
         }
         

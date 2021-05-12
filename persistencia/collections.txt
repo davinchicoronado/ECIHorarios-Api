@@ -7,7 +7,8 @@ use ECIHorarios
 db.createCollection("Users")
 db.createCollection("Credentials") 
 db.createCollection("Subjects")
-db.createCollection("Curriculum")
+db.createCollection("Curriculum") 
+db.createCollection("Schedules")
 
 -----------------------PoblarOk------------------------------- 
 ----------------------CredentialsUser------------------------- 
@@ -186,6 +187,9 @@ db.Curriculum.insert(
 	}
 )
 
+-------------------------Schedules------------------------------- 
+
+db.Schedules.insert({"teacher":"Edwin Perez", "numGroup":1, "lessons": [{"hour":"10:00","classRoom":"F-202","day":"Lunes"} ,{"hour":"10:00","classRoom":"F-202","day":"Martes"},{"hour":"10:00","classRoom":"C-102","day":"Miercoles"} ],"limit":25 , "code":"CALD" }) 
 
 
 
@@ -194,10 +198,12 @@ db.Curriculum.insert(
 db.Users.remove({}) 
 db.Credentials.remove({}) 
 db.Subjects.remove({})
-db.Curriculum.remove({})
+db.Curriculum.remove({}) 
+db.Schedules.remove({})
 ---------------------------Delete Collections --------------------
 db.Users.drop()
 db.Credentials.drop()  
 db.Subjects.drop() 
-db.Curriculum.remove()
+db.Curriculum.drop()
+db.Schedules.drop()
 
