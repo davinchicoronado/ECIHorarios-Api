@@ -40,6 +40,7 @@ public class MongoDAOUser implements DaoUser {
             throw new PersistenceException("Error no se encontro usuario");
         }
         
+        
         return user;
    
     } 
@@ -70,7 +71,8 @@ public class MongoDAOUser implements DaoUser {
         User user = mongoTemplate.findOne(query,User.class);
         if(user == null){
             throw new PersistenceException("Error no se encontro usuario");
-        }
+        } 
+
         return user;
         
     } 

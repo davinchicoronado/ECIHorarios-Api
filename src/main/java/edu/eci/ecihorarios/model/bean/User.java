@@ -6,15 +6,20 @@
 package edu.eci.ecihorarios.model.bean;
 
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
 
 /**
  *
  * @author David Coronado
  */ 
-@Document(collection = "Users")
+@Document(collection = "Users") 
+ 
+@JsonInclude(Include.NON_DEFAULT)
 public class User {
 
     @Id
@@ -22,9 +27,11 @@ public class User {
     private String identification;
     private char tipo;
     private String email; 
-    private int semester;
+    private int semester; 
     private int limitCredits;
-    private String name; 
+    private String name;  
+    
+    @JsonInclude(Include.NON_NULL) 
     private List<String> approvedSubjects;
     private String carrer;
 

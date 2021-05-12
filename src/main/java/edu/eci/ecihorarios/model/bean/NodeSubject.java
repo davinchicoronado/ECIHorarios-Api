@@ -5,15 +5,18 @@
  */
 package edu.eci.ecihorarios.model.bean;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import java.util.List;
 
 /**
  *
  * @author David Coronado
- */
+ */ 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class NodeSubject {
     
-    private String code;
+    private String code; 
+    
     private List<String> prerequisites;
 
     public String getCode() {
