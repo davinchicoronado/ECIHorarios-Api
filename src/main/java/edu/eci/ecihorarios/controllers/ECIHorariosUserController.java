@@ -24,4 +24,9 @@ public class ECIHorariosUserController {
     public String privateArea() {
         return "Private area";
     }
+
+    @GetMapping(value = "/prueba")
+    public String prueba() {
+        return "Private area";
+    }
 }

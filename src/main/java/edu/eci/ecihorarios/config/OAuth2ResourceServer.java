@@ -18,7 +18,7 @@ public class OAuth2ResourceServer extends ResourceServerConfigurerAdapter{
     
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        	http
+        	http.cors().and().csrf().disable()
 	.authorizeRequests().antMatchers("/oauth/token", "/oauth/authorize**", "/error**").permitAll();
 	 //.anyRequest().authenticated();
         
@@ -35,8 +35,9 @@ public class OAuth2ResourceServer extends ResourceServerConfigurerAdapter{
                  .and().requestMatchers().antMatchers("/ecihorarios/availablesubject/**") 
                  .and().authorizeRequests().antMatchers("/ecihorarios/availablesubject/**").hasAnyAuthority("USER","ADMIN")
                  .and().requestMatchers().antMatchers("/ecihorarios/schedule/**") 
-                 .and().authorizeRequests().antMatchers("/ecihorarios/schedule/**").hasAnyAuthority("USER","ADMIN");
-                 
+                 .and().authorizeRequests().antMatchers("/ecihorarios/schedule/**").hasAnyAuthority("USER","ADMIN")
+                 .and().requestMatchers().antMatchers("/ecihorarios/saveSchedule/**") 
+                 .and().authorizeRequests().antMatchers("/ecihorarios/saveSchedule/**").hasAuthority("USER");
          
     }
     

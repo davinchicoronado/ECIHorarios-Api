@@ -13,6 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
 
+
 /**
  *
  * @author David Coronado
@@ -35,13 +36,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     } 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests() 
+        http.cors().and().csrf().disable().authorizeRequests() 
                 .anyRequest()
                 .authenticated() 
                 .and() 
                 .httpBasic();
         
-    }
+    } 
+
     
     @Bean
     @Override

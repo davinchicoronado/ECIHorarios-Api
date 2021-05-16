@@ -86,7 +86,6 @@ public class MongoDAOUser implements DaoUser {
         
         if(u!=null){
             throw new PersistenceException("Detalles del usuario existentes");
-        
         }
         mongoTemplate.save(user); 
         

@@ -8,6 +8,7 @@ package edu.eci.ecihorarios.services.impl;
 import edu.eci.ecihorarios.cachestub.ECIHorariosCache;
 import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Group;
+import edu.eci.ecihorarios.model.bean.ScheduleStudent;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.model.bean.SubjectStudent;
 import edu.eci.ecihorarios.model.bean.User;
@@ -33,8 +34,7 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
     @Qualifier("persistenceManagerDB")        
     PersistenceManager pms;
     
-    @Autowired
-    ECIHorariosCache cacheEci;
+
 
     @Override
     public List<Subject> getAvailableSubjects(String username) throws ServicesException {
@@ -70,11 +70,6 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
     
 
     @Override
-    public void saveScheduleStudent(List<SubjectStudent> ss) throws ServicesException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public Curriculum getCurriculum(String carrer) throws ServicesException {
         try {
             return pms.getCurriculum(carrer);
@@ -91,6 +86,38 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
         } catch (PersistenceException ex) {
             Logger.getLogger(ECIHorariosServicesImpl.class.getName()).log(Level.SEVERE, null, ex); 
             throw new ServicesException("No se pudo consultar la asignatura: "+code,ex);
+        }
+    }
+
+    @Override
+    public void saveScheduleStudent(List<SubjectStudent> schedule, String username) throws ServicesException {
+        
+        try {
+            pms.saveScheduleStudent(schedule, username);
+        } catch (PersistenceException ex) {
+            Logger.getLogger(ECIHorariosServicesImpl.class.getName()).log(Level.SEVERE, null, ex); 
+            throw new ServicesException("No se pudo guardar el horario al estudiante: "+username,ex);
+        }
+        
+    } 
+    
+    @Override
+    public void enrollSubject(SubjectStudent ss, String username) throws ServicesException {
+        try {
+            pms.enrollSubject(ss, username);
+        } catch (PersistenceException ex) {
+            Logger.getLogger(ECIHorariosServicesImpl.class.getName()).log(Level.SEVERE, null, ex); 
+            throw new ServicesException("No se pudo inscribir la asignatura: "+ss.getSubjectid(),ex);
+        }
+    }
+
+    @Override
+    public List<ScheduleStudent> getScheduleStudent(String username) throws ServicesException {
+        try {
+            return pms.getScheduleStudent(username);
+        } catch (PersistenceException ex) {
+            Logger.getLogger(ECIHorariosServicesImpl.class.getName()).log(Level.SEVERE, null, ex); 
+            throw new ServicesException("No se pudo consultar los prehorarios del usuario: "+username,ex);
         }
     }
       

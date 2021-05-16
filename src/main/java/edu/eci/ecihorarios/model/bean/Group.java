@@ -68,7 +68,7 @@ public class Group {
 
     @Override
     public String toString() {
-        return "Group{" + "teacher=" + teacher + ", numGroup=" + numGroup + ", lessons=" + lessons + ", limit=" + limit + "}";
+        return "Group{" + "teacher=" + teacher + ", numGroup=" + numGroup + ", lessons=" + lessons  + "}";
     }
 
 

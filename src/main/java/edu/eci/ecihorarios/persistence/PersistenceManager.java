@@ -5,46 +5,34 @@
  */
 package edu.eci.ecihorarios.persistence;
 
-
-
 import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Group;
+import edu.eci.ecihorarios.model.bean.ScheduleStudent;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.model.bean.SubjectStudent;
 import edu.eci.ecihorarios.model.bean.User;
 import java.util.List;
 
-
 /**
  *
  * @author David Coronado
  */
-
 public interface PersistenceManager {
-    
- 
-     
+
     public List<Subject> getAvailableSubjects(String username) throws PersistenceException;
-    
-    
-    
-    
+
     public List<Group> getSchedule(String codeSubject) throws PersistenceException;
-    
-    
-    
-    
+
     public User getUser(String username) throws PersistenceException;
-    
-    
-    
-    
-    public void saveScheduleStudent(List<SubjectStudent> ss) throws PersistenceException; 
-    
-    
-    
-    public Curriculum getCurriculum(String carrer) throws PersistenceException; 
-    
-    
+
+    public void saveScheduleStudent(List<SubjectStudent> ss, String username) throws PersistenceException;
+
+    public Curriculum getCurriculum(String carrer) throws PersistenceException;
+
     public Subject getSubject(String code) throws PersistenceException;
+
+    public List<ScheduleStudent> getScheduleStudent(String username) throws PersistenceException;
+
+    public void enrollSubject(SubjectStudent ss, String username) throws PersistenceException;
+
 }

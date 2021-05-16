@@ -27,7 +27,7 @@ public class MongoConnection {
 
     @Bean
     public MongoClient mongoClient() {
-        ConnectionString connString = new ConnectionString("mongodb+srv://ProjectEciHorarios:admin123@clusterecihorarios.gdwta.mongodb.net/ECIHorarios?w=majority");
+        ConnectionString connString = new ConnectionString("mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb");
         MongoClientSettings settings = MongoClientSettings.builder()
                 .applyConnectionString(connString)
                 .retryWrites(true)

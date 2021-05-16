@@ -7,6 +7,7 @@ package edu.eci.ecihorarios.services;
 
 import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Group;
+import edu.eci.ecihorarios.model.bean.ScheduleStudent;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.model.bean.SubjectStudent;
 import edu.eci.ecihorarios.model.bean.User;
@@ -49,10 +50,11 @@ public interface ECIHorariosServices {
     
      /**
      * Metodo que guardar horarios de un estudiante
-     * @param ss 
+     * @param schedule 
+     * @param username 
      * @throws edu.eci.ecihorarios.services.ServicesException 
      */  
-    public void saveScheduleStudent(List<SubjectStudent> ss)throws ServicesException; 
+    public void saveScheduleStudent(List<SubjectStudent> schedule, String username)throws ServicesException; 
     
        /**
      * Metodo que permite consultar el plan de estudios de una carrera
@@ -71,6 +73,26 @@ public interface ECIHorariosServices {
      * @return  Detalle de la asignatura
      * @throws edu.eci.ecihorarios.services.ServicesException 
      */ 
-    public Subject getSubject(String code) throws ServicesException; 
+    public Subject getSubject(String code) throws ServicesException;  
+    
+      /**
+     * Metodo que permite consultar los detalles de una asignatura
+     * @param ss
+     * @param username
+     * @throws edu.eci.ecihorarios.services.ServicesException 
+     */ 
+    
+    
+    public void enrollSubject(SubjectStudent ss, String username) throws ServicesException;  
+    
+      /**
+     * Metodo que permite consultar los detalles de una asignatura
+     * @param username
+     * @return 
+     * @throws edu.eci.ecihorarios.services.ServicesException 
+     */ 
+    
+    
+    public List<ScheduleStudent> getScheduleStudent(String username) throws ServicesException;
     
 }

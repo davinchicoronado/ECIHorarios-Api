@@ -8,6 +8,7 @@ package edu.eci.ecihorarios.persistence.db;
 import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Group;
 import edu.eci.ecihorarios.model.bean.NodeSubject;
+import edu.eci.ecihorarios.model.bean.ScheduleStudent;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.model.bean.SubjectStudent;
 import edu.eci.ecihorarios.model.bean.User;
@@ -66,13 +67,8 @@ public class PersistenceManagerDB implements PersistenceManager {
     }
 
     @Override
-    public User getUser(String username) throws PersistenceException { 
+    public User getUser(String username) throws PersistenceException {  
         return daoUser.getUserDetails(username);
-    }
-
-    @Override
-    public void saveScheduleStudent(List<SubjectStudent> ss) throws PersistenceException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -83,6 +79,21 @@ public class PersistenceManagerDB implements PersistenceManager {
     @Override
     public Subject getSubject(String code) throws PersistenceException {
         return daoSubject.getSubject(code);
+    }
+
+    @Override
+    public void saveScheduleStudent(List<SubjectStudent> ss, String username) throws PersistenceException {
+        daoSubject.saveScheduleStudent(ss, username);
+    }
+
+    @Override
+    public List<ScheduleStudent> getScheduleStudent(String username) throws PersistenceException {
+        return daoSubject.getScheduleStudent(username);
+    }
+
+    @Override
+    public void enrollSubject(SubjectStudent ss, String username) throws PersistenceException {
+        daoSubject.enrollSubject(ss, username);
     }
     
 

@@ -9,6 +9,7 @@ package edu.eci.ecihorarios.persistence.stub;
 import edu.eci.ecihorarios.model.bean.ClassSchedule;
 import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Group;
+import edu.eci.ecihorarios.model.bean.ScheduleStudent;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.model.bean.SubjectStudent;
 import edu.eci.ecihorarios.model.bean.User;
@@ -106,7 +107,7 @@ public class PersistenceManagerStub implements PersistenceManager{
         schedules.put("CALD", sh2);
         
         //----------------------------------------------------
-        List<SubjectStudent> schedules1 = new ArrayList<SubjectStudent>();
+        List<SubjectStudent> schedules1 = new ArrayList<>();
         
         scheduleStudents.put("admin", schedules1);
         
@@ -130,7 +131,7 @@ public class PersistenceManagerStub implements PersistenceManager{
     } 
     
     @Override
-    public void saveScheduleStudent(List<SubjectStudent> schedule)throws PersistenceException{
+    public void saveScheduleStudent(List<SubjectStudent> schedule, String username)throws PersistenceException{
         System.out.println(schedule.toString());
     }
 
@@ -141,6 +142,16 @@ public class PersistenceManagerStub implements PersistenceManager{
 
     @Override
     public Subject getSubject(String code) throws PersistenceException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<ScheduleStudent> getScheduleStudent(String username) throws PersistenceException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void enrollSubject(SubjectStudent ss, String username) throws PersistenceException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

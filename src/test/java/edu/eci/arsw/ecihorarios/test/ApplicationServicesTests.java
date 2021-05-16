@@ -4,6 +4,7 @@ import edu.eci.ecihorarios.config.MongoConnection;
 import edu.eci.ecihorarios.model.bean.CredentialsUser;
 import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Subject;
+import edu.eci.ecihorarios.model.bean.SubjectStudent;
 import edu.eci.ecihorarios.model.bean.User;
 import edu.eci.ecihorarios.persistence.db.DaoUser;
 import edu.eci.ecihorarios.persistence.PersistenceException;
@@ -205,7 +206,7 @@ public class ApplicationServicesTests {
     public void getScheduleSubject(){
     
         try { 
-            String value = "[Group{teacher=Edwin Perez, numGroup=1, lessons=[ClassSchedule{hour=10:00, classRoom=F-202, day=Lunes}, ClassSchedule{hour=10:00, classRoom=F-202, day=Martes}, ClassSchedule{hour=10:00, classRoom=C-102, day=Miercoles}], limit=25}]";
+            String value = "[Group{teacher=Edwin Perez, numGroup=1, lessons=[ClassSchedule{hour=10:00, classRoom=F-202, day=Lunes}, ClassSchedule{hour=10:00, classRoom=F-202, day=Martes}, ClassSchedule{hour=10:00, classRoom=C-102, day=Miercoles}]}]";
             assertTrue(value.equals(pm.getSchedule("CALD").toString()));
         } catch (PersistenceException ex) {
             Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);
@@ -216,12 +217,85 @@ public class ApplicationServicesTests {
     public void nogetScheduleSubject(){
     
         try {
-            pm.getSchedule("PPPP");      
+            pm.getSchedule("PPPP");     
+            assertTrue(false);
         } catch (PersistenceException ex) { 
             assertTrue(true);
             Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);
         }
     
+    }  
+    /**
+    @Test 
+    public void saveSheduleStudent(){ 
+        
+        SubjectStudent shstudent = new SubjectStudent(1,"LCAL");
+        SubjectStudent shstudent2 = new SubjectStudent(1,"CALD"); 
+    
+        List<SubjectStudent> ss = new ArrayList<>(); 
+        ss.add(shstudent);
+        ss.add(shstudent2);
+        
+        try {
+            pm.saveScheduleStudent(ss, "david.coronado"); 
+            assertTrue(true);
+        } catch (PersistenceException ex) {
+            Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+    }  
+    * */
+    @Test 
+    public void getSheduleStudent(){
+        
+        try {
+            pm.getScheduleStudent("david.coronado");
+            assertTrue(true);
+        } catch (PersistenceException ex) { 
+            assertTrue(false);
+            Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+    }  
+    
+    @Test 
+    public void noenrollSubjectLimit(){
+        SubjectStudent ss = new SubjectStudent(2,"ALLI");
+        try {
+            pm.enrollSubject(ss, "david.coronado"); 
+            assertTrue(false);
+        } catch (PersistenceException ex) { 
+            assertTrue(true);
+            Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+    }  
+    /**
+    @Test 
+    public void enrollSubjectLimit(){
+        SubjectStudent ss = new SubjectStudent(1,"CALD");
+        try {
+            pm.enrollSubject(ss, "david.coronado"); 
+            assertTrue(true);
+        } catch (PersistenceException ex) { 
+            assertTrue(false);
+            Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
     } 
+    * */  
+    @Test 
+    public void enrolledSubjectLimit(){
+        SubjectStudent ss = new SubjectStudent(1,"CALD");
+        try {
+            pm.enrollSubject(ss, "david.coronado"); 
+            assertTrue(false);
+        } catch (PersistenceException ex) { 
+            assertTrue(true);
+            Logger.getLogger(ApplicationServicesTests.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+    }
+    
     
 }

@@ -10,7 +10,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import java.util.List;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 
 /**
@@ -32,9 +34,11 @@ public class User {
     private String name;  
     
     @JsonInclude(Include.NON_NULL) 
-    private List<String> approvedSubjects;
-    private String carrer;
-
+    private List<String> approvedSubjects; 
+    private String carrer; 
+    @Field("enrolled_subjects")
+    private List<SubjectStudent> enrolledsubject;
+    
 
     
     public User(){
@@ -128,6 +132,16 @@ public class User {
     public String getCarrer() {
         return carrer;
     }
+
+    public List<SubjectStudent> getEnrolledsubject() {
+        return enrolledsubject;
+    }
+
+    public void setEnrolledsubject(List<SubjectStudent> enrolledsubject) {
+        this.enrolledsubject = enrolledsubject;
+    }
+
+
     
     
     
