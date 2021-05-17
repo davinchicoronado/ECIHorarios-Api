@@ -100,6 +100,11 @@ public class PersistenceManagerDB implements PersistenceManager {
     public void deleteSubject(SubjectStudent ss, String username) throws PersistenceException {
         daoSubject.deleteSubject(ss,username);
     }
+
+    @Override
+    public void enrollSubjectStudent(SubjectStudent ss, String username) throws PersistenceException {
+        daoSubject.enrollSubjectStudent(ss, username);
+    }
     
 
 

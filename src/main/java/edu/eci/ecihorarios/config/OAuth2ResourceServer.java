@@ -45,7 +45,9 @@ public class OAuth2ResourceServer extends ResourceServerConfigurerAdapter {
                 .and().requestMatchers().antMatchers("/ecihorarios/enrollSubject/**")
                 .and().authorizeRequests().antMatchers("/ecihorarios/enrollSubject/**").hasAuthority("USER")
                 .and().requestMatchers().antMatchers("/ecihorarios/deleteSubject/**")
-                .and().authorizeRequests().antMatchers("/ecihorarios/deleteSubject/**").hasAuthority("USER");
+                .and().authorizeRequests().antMatchers("/ecihorarios/deleteSubject/**").hasAuthority("USER")
+                .and().requestMatchers().antMatchers("/ecihorarios/enrollSubjectStudent/**")
+                .and().authorizeRequests().antMatchers("/ecihorarios/enrollSubjectStudent/**").hasAuthority("ADMIN");
 
     }
 

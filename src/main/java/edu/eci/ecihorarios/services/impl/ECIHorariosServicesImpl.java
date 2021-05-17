@@ -130,6 +130,16 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
             throw new ServicesException("No se pudo  la asignatura: "+ss.getSubjectid(),ex);
         }
     }
+
+    @Override
+    public void enrollSubjectStudent(SubjectStudent ss, String username) throws ServicesException {
+        try {
+            pms.enrollSubjectStudent(ss, username);
+        } catch (PersistenceException ex) {
+            Logger.getLogger(ECIHorariosServicesImpl.class.getName()).log(Level.SEVERE, null, ex); 
+            throw new ServicesException("No se pudo inscribir la asignatura: "+ss.getSubjectid(),ex);
+        }
+    }
       
     
 

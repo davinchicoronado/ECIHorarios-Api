@@ -35,6 +35,8 @@ public interface PersistenceManager {
 
     public void enrollSubject(SubjectStudent ss, String username) throws PersistenceException; 
     
-    public void deleteSubject(SubjectStudent ss, String username) throws PersistenceException;
+    public void deleteSubject(SubjectStudent ss, String username) throws PersistenceException; 
+    
+    public void enrollSubjectStudent(SubjectStudent ss, String username) throws PersistenceException; 
 
 }

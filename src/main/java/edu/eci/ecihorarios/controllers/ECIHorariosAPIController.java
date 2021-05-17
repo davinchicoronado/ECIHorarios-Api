@@ -125,8 +125,23 @@ public class ECIHorariosAPIController {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(new ObjectError(ex.getMessage()), HttpStatus.FORBIDDEN);
         }
+    }  
+    
+    @RequestMapping(path = "/enrollSubjectStudent/{username}", method = RequestMethod.PUT)
+    public ResponseEntity<?> enrollSubjectStudent(@PathVariable("username") String username, @RequestBody SubjectStudent subjectgroup) {
+
+        try {
+            ecih.enrollSubjectStudent(subjectgroup, username);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } catch (ServicesException ex) {
+            Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()), HttpStatus.FORBIDDEN);
+        }
     } 
-        @RequestMapping(path = "/deleteSubject/{username}", method = RequestMethod.DELETE)
+    
+    
+    
+    @RequestMapping(path = "/deleteSubject/{username}", method = RequestMethod.DELETE)
     public ResponseEntity<?> deleteSubject(@PathVariable("username") String username, @RequestBody SubjectStudent subjectgroup) {
 
         try {
@@ -136,6 +151,7 @@ public class ECIHorariosAPIController {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(new ObjectError(ex.getMessage()), HttpStatus.FORBIDDEN);
         }
-    }
+    } 
+    
 
 }

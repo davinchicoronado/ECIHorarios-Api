@@ -148,7 +148,7 @@ public class MongoDAOSubject implements DaoSubject {
 
         Group gr = mongoTemplate.findOne(query3, Group.class);
 
-        if (gr.getLimit() == 0) {
+        if (gr.getLimit() <= 0) {
             throw new PersistenceException("Error no hay cupos");
         }
 
@@ -246,6 +246,70 @@ public class MongoDAOSubject implements DaoSubject {
 
         }
 
+    }
+
+    @Override
+    public void enrollSubjectStudent(SubjectStudent ss, String username) throws PersistenceException {
+        Query query = new Query();
+        query.addCriteria(Criteria.where("_id").is(username));
+
+        User user = mongoTemplate.findOne(query, User.class);
+
+        if (user == null) {
+            throw new PersistenceException("Error no se encontro usuario");
+        }
+        Query query3 = new Query();
+        query3.fields().include("teacher");
+        query3.fields().include("numGroup");
+        query3.fields().include("lessons");
+        query3.fields().include("limit");
+        query3.addCriteria(Criteria.where("code").is(ss.getSubjectid()));
+        query3.addCriteria(Criteria.where("numGroup").is(ss.getGroup()));
+
+        Group gr = mongoTemplate.findOne(query3, Group.class);
+
+
+        
+        if (user.getEnrolledsubject() == null) {
+            Query query2 = new Query();
+            query2.addCriteria(Criteria.where("_id").is(username));
+
+            List<SubjectStudent> enrolled = new ArrayList<>();
+            enrolled.add(ss);
+
+            Update update = new Update();
+
+            update.set("enrolled_subjects", enrolled);
+
+            update.set("limitCredits", user.getLimitCredits() - getSubject(ss.getSubjectid()).getCredits());
+
+            mongoTemplate.updateFirst(query2, update, User.class);
+
+            Update update2 = new Update();
+            update2.set("limit", gr.getLimit() - 1);
+            mongoTemplate.updateFirst(query3, update2, Group.class);
+
+        } else {
+            Query query2 = new Query();
+            query2.addCriteria(Criteria.where("_id").is(username));
+
+            List<SubjectStudent> enrolled = user.getEnrolledsubject();
+
+            if (enrolled.contains(ss)) {
+                throw new PersistenceException("Materia ya inscrita");
+            }
+
+            enrolled.add(ss);
+            Update update = new Update();
+            update.set("enrolled_subjects", enrolled);
+            update.set("limitCredits", user.getLimitCredits() - getSubject(ss.getSubjectid()).getCredits());
+            mongoTemplate.updateFirst(query2, update, User.class);
+
+            Update update2 = new Update();
+            update2.set("limit", gr.getLimit() - 1);
+            mongoTemplate.updateFirst(query3, update2, Group.class);
+
+        }
     }
 
 }

@@ -160,6 +160,11 @@ public class PersistenceManagerStub implements PersistenceManager{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public void enrollSubjectStudent(SubjectStudent ss, String username) throws PersistenceException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
     
 }

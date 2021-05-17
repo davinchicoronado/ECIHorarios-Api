@@ -87,10 +87,13 @@ public interface ECIHorariosServices {
     
       /**
      * Metodo que permite consultar los detalles de una asignatura
+     * @param ss
      * @param username
-     * @return 
      * @throws edu.eci.ecihorarios.services.ServicesException 
      */ 
+    public void enrollSubjectStudent(SubjectStudent ss, String username)throws ServicesException;
+    
+    
     
     
     public List<ScheduleStudent> getScheduleStudent(String username) throws ServicesException; 
