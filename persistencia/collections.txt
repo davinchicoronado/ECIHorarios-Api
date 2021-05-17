@@ -223,5 +223,6 @@ db.Users.drop()
 db.Credentials.drop()  
 db.Subjects.drop() 
 db.Curriculum.drop()
-db.Schedules.drop()
+db.Schedules.drop() 
+db.SchedulesStudents.drop()
 

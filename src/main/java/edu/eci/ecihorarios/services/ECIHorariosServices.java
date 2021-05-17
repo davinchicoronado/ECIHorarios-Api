@@ -93,6 +93,14 @@ public interface ECIHorariosServices {
      */ 
     
     
-    public List<ScheduleStudent> getScheduleStudent(String username) throws ServicesException;
+    public List<ScheduleStudent> getScheduleStudent(String username) throws ServicesException; 
     
+      /**
+     * Metodo que permite consultar los detalles de una asignatura
+     * @param ss
+     * @param username
+     * @throws edu.eci.ecihorarios.services.ServicesException 
+     */ 
+    
+    public void deleteSubject(SubjectStudent ss, String username)throws ServicesException;
 }

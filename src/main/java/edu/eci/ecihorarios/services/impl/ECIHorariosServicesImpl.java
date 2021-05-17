@@ -120,6 +120,16 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices{
             throw new ServicesException("No se pudo consultar los prehorarios del usuario: "+username,ex);
         }
     }
+
+    @Override
+    public void deleteSubject(SubjectStudent ss, String username) throws ServicesException {
+        try {
+            pms.deleteSubject(ss, username);
+        } catch (PersistenceException ex) {
+            Logger.getLogger(ECIHorariosServicesImpl.class.getName()).log(Level.SEVERE, null, ex); 
+            throw new ServicesException("No se pudo  la asignatura: "+ss.getSubjectid(),ex);
+        }
+    }
       
     
 

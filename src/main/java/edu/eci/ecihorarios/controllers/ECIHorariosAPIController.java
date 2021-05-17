@@ -26,112 +26,116 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author David Coronado
  */
-
 @RestController
 @RequestMapping(value = "/ecihorarios")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ECIHorariosAPIController {
-    
-    @Autowired 
-    ECIHorariosServices ecih;
-    
 
-    
-    @RequestMapping(path ="/user/{username}",method = RequestMethod.GET)
-    public ResponseEntity<?> getUser(@PathVariable ("username") String username){
-       
+    @Autowired
+    ECIHorariosServices ecih;
+
+    @RequestMapping(path = "/user/{username}", method = RequestMethod.GET)
+    public ResponseEntity<?> getUser(@PathVariable("username") String username) {
+
         try {
-            return new ResponseEntity<>(ecih.getUser(username),HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(ecih.getUser(username), HttpStatus.ACCEPTED);
         } catch (ServicesException ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(new ObjectError(ex.getMessage()),HttpStatus.NOT_FOUND);
-        }        
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()), HttpStatus.NOT_FOUND);
+        }
     }
-    
-    @RequestMapping(path ="/curriculum/{name}",method = RequestMethod.GET)
-    public ResponseEntity<?> getCurriculum(@PathVariable ("name") String name){
-       
+
+    @RequestMapping(path = "/curriculum/{name}", method = RequestMethod.GET)
+    public ResponseEntity<?> getCurriculum(@PathVariable("name") String name) {
+
         try {
-            return new ResponseEntity<>(ecih.getCurriculum(name),HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(ecih.getCurriculum(name), HttpStatus.ACCEPTED);
         } catch (ServicesException ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(new ObjectError(ex.getMessage()),HttpStatus.NOT_FOUND);
-        }        
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()), HttpStatus.NOT_FOUND);
+        }
     }
-    
-    
-    @RequestMapping(path ="/subject/{code}",method = RequestMethod.GET)
-    public ResponseEntity<?> getDetailsSubjects(@PathVariable ("code") String code){
-       
-        try {      
-            return new ResponseEntity<>(ecih.getSubject(code),HttpStatus.ACCEPTED);
+
+    @RequestMapping(path = "/subject/{code}", method = RequestMethod.GET)
+    public ResponseEntity<?> getDetailsSubjects(@PathVariable("code") String code) {
+
+        try {
+            return new ResponseEntity<>(ecih.getSubject(code), HttpStatus.ACCEPTED);
         } catch (ServicesException ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(new ObjectError(ex.getMessage()),HttpStatus.NOT_FOUND);
-        }        
-    }  
-    @RequestMapping(path ="/availablesubject/{username}",method = RequestMethod.GET)
-    public ResponseEntity<?> availableSubjects(@PathVariable ("username") String username){
-       
-        try {      
-            return new ResponseEntity<>(ecih.getAvailableSubjects(username),HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()), HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @RequestMapping(path = "/availablesubject/{username}", method = RequestMethod.GET)
+    public ResponseEntity<?> availableSubjects(@PathVariable("username") String username) {
+
+        try {
+            return new ResponseEntity<>(ecih.getAvailableSubjects(username), HttpStatus.ACCEPTED);
         } catch (ServicesException ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(new ObjectError(ex.getMessage()),HttpStatus.NOT_FOUND);
-        }        
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()), HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @RequestMapping(path = "/schedule/{subjectid}", method = RequestMethod.GET)
+    public ResponseEntity<?> getScheduleSubject(@PathVariable("subjectid") String subjectid) {
+
+        try {
+
+            return new ResponseEntity<>(ecih.getSchedule(subjectid), HttpStatus.ACCEPTED);
+        } catch (ServicesException ex) {
+            Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()), HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @RequestMapping(path = "/schedulesStudent/{username}", method = RequestMethod.GET)
+    public ResponseEntity<?> getschedulesStudet(@PathVariable("username") String username) {
+
+        try {
+
+            return new ResponseEntity<>(ecih.getScheduleStudent(username), HttpStatus.ACCEPTED);
+        } catch (ServicesException ex) {
+            Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()), HttpStatus.NOT_FOUND);
+        }
+    }
+
+
+    @RequestMapping(path = "/saveSchedule/{username}", method = RequestMethod.POST)
+    public ResponseEntity<?> saveSchedule(@PathVariable("username") String username, @RequestBody List<SubjectStudent> subjectid) {
+
+        try {
+            ecih.saveScheduleStudent(subjectid, username);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } catch (ServicesException ex) {
+            Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()), HttpStatus.FORBIDDEN);
+        }
+    }
+
+    @RequestMapping(path = "/enrollSubject/{username}", method = RequestMethod.PUT)
+    public ResponseEntity<?> enrollSubject(@PathVariable("username") String username, @RequestBody SubjectStudent subjectgroup) {
+
+        try {
+            ecih.enrollSubject(subjectgroup, username);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } catch (ServicesException ex) {
+            Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()), HttpStatus.FORBIDDEN);
+        }
     } 
-    
-    @RequestMapping(path ="/schedule/{subjectid}",method = RequestMethod.GET)
-    public ResponseEntity<?> getScheduleSubject(@PathVariable ("subjectid") String subjectid){
-       
-        try { 
-            
-            return new ResponseEntity<>(ecih.getSchedule(subjectid),HttpStatus.ACCEPTED);
+        @RequestMapping(path = "/deleteSubject/{username}", method = RequestMethod.DELETE)
+    public ResponseEntity<?> deleteSubject(@PathVariable("username") String username, @RequestBody SubjectStudent subjectgroup) {
+
+        try {
+            ecih.deleteSubject(subjectgroup, username);
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
         } catch (ServicesException ex) {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(new ObjectError(ex.getMessage()),HttpStatus.NOT_FOUND);
-        }        
-    } 
-    @RequestMapping(path ="/schedules/{subjectid}",method = RequestMethod.GET)
-    public ResponseEntity<?> getschedulesStudet(@PathVariable ("subjectid") String username){
-       
-        try { 
-            
-            return new ResponseEntity<>(ecih.getScheduleStudent(username),HttpStatus.ACCEPTED);
-        } catch (ServicesException ex) {
-            Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(new ObjectError(ex.getMessage()),HttpStatus.NOT_FOUND);
-        }        
-    } 
-    
-     @RequestMapping(path="/saveSchedule/{username}",method = RequestMethod.POST) 
-     public ResponseEntity<?> saveSchedule(@PathVariable ("username") String username,@RequestBody List<SubjectStudent> subjectid){
-       
-     try { 
-           ecih.saveScheduleStudent(subjectid,username);
-           return new ResponseEntity<>(HttpStatus.CREATED);      
-        } catch (ServicesException ex) {
-            Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(new ObjectError(ex.getMessage()),HttpStatus.FORBIDDEN);
-        }        
-    }  
-    
-     @RequestMapping(path = "/enrollSubject/{username}",method = RequestMethod.PUT)
-      public ResponseEntity<?> enrollSubject(@PathVariable ("username") String username,@RequestBody SubjectStudent subjectid){
-       
-     try { 
-           ecih.enrollSubject(subjectid, username);
-           return new ResponseEntity<>(HttpStatus.CREATED);      
-        } catch (ServicesException ex) {
-            Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>(new ObjectError(ex.getMessage()),HttpStatus.FORBIDDEN);
-        }        
-    } 
-     
-      
-     
-     
-    
-    
-    
+            return new ResponseEntity<>(new ObjectError(ex.getMessage()), HttpStatus.FORBIDDEN);
+        }
+    }
+
 }

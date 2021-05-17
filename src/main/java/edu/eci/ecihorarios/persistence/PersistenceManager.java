@@ -33,6 +33,8 @@ public interface PersistenceManager {
 
     public List<ScheduleStudent> getScheduleStudent(String username) throws PersistenceException;
 
-    public void enrollSubject(SubjectStudent ss, String username) throws PersistenceException;
+    public void enrollSubject(SubjectStudent ss, String username) throws PersistenceException; 
+    
+    public void deleteSubject(SubjectStudent ss, String username) throws PersistenceException;
 
 }

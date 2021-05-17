@@ -31,5 +31,6 @@ public interface DaoSubject {
     
     public void enrollSubject(SubjectStudent ss , String usernmae ) throws PersistenceException; 
     
+    public void deleteSubject(SubjectStudent ss , String username ) throws PersistenceException;
     
 }
