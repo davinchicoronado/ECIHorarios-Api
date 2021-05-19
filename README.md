@@ -44,14 +44,21 @@ La plataforma esta planteada como una herramienta nueva para realizar horario, l
  
 ## **Arquitecura y Diseño**
 ### Casos de uso 
-![](Img/Diagramas/casodeusoest.png)
-* Registrar Login 
- Como estudiante quiero iniciar sesion en la plataforma para poder realizar diferentes operaciones referente a la inscripción de horarios.
+![](Img/Diagramas/casodeusoest.png) 
+
+#### Registrar Login 
+Como estudiante quiero iniciar sesion en la plataforma para poder realizar diferentes operaciones referente a la inscripción de horarios.
    
-* Registrar Asignatura 
-      -  asdasd
+#### Registrar Asignatura 
 
+Como estudiante quiero registrar una asignatura para poder verla en el actual semestre. 
 
+* Consultar las asignaturas disponibles para el estudiante. 
+* Agregar una asignatura . Restricciones : El estudiante no podrá inscribir asignaturas que no tengan cupos y no podrá exeder el número de creditos disponibles para el estudiante
+* Eliminar alguna asignatura inscrita 
+
+#### Registrar mensaje 
+Como estudiante quiero enviar mensajes al admnistrador del area encargada para poder solucionar mis dudas o realizar solicitudes.
 
 
 
