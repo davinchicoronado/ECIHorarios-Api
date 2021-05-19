@@ -43,7 +43,10 @@ La plataforma esta planteada como una herramienta nueva para realizar horario, l
 
  
 ## **Arquitecura y Diseño**
-
+### Casos de uso 
+<p align="center">
+    <img src="https://github.com/davinchicoronado/proyect/blob/logicalLayer/Img/Diagramas/casodeusoest.png?raw=true" alt="Sublime's custom image"/>
+  </p>
 
 
 
