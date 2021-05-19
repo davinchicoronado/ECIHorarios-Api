@@ -63,7 +63,8 @@ La plataforma esta planteada como una herramienta nueva para realizar horarios, 
 * Como estudiante quiero enviar mensajes al admnistrador del area encargada para poder solucionar mis dudas o realizar solicitudes. 
 
 ####  Administrador 
-![](Img/Diagramas/casodeusoadmin.png)
+![](Img/Diagramas/casodeusoadmin.png) 
+
 ##### Registrar Login 
 * Como administrador quiero iniciar sesión en la plataforma para poder responder las  diferentes solicitudes de los estudiantes referente a la inscripción de horarios. 
 
