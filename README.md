@@ -43,7 +43,9 @@ La plataforma esta planteada como una herramienta nueva para realizar horario, l
 
  
 ## **Arquitecura y Diseño**
-### Casos de uso 
+### Casos de uso  
+
+#### ** Estudiante **
 ![](Img/Diagramas/casodeusoest.png) 
 
 #### Registrar Login 
@@ -60,11 +62,12 @@ La plataforma esta planteada como una herramienta nueva para realizar horario, l
 #### Registrar mensaje 
 * Como estudiante quiero enviar mensajes al admnistrador del area encargada para poder solucionar mis dudas o realizar solicitudes. 
 
+#### ** Administrador **
 ![](Img/Diagramas/casodeusoadmin.png)
 #### Registrar Login 
 * Como administrador quiero iniciar sesión en la plataforma para poder responder las  diferentes solicitudes de los estudiantes referente a la inscripción de horarios. 
 
-#### Registrar Login 
+#### Consultar Estudiante 
 * Como administrador quiero consultar la información de un estudiante para poder realizar un debido proceso en cuanto a sus solicitudes.
 
 #### Registrar Asignatura 
