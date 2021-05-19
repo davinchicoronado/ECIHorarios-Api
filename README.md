@@ -27,17 +27,17 @@ La plataforma esta planteada como una herramienta nueva para realizar horario, l
 
 
 
-### Despliegue  ECIHorariosApi
+#### Despliegue  ECIHorariosApi
 >[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://ecihorarios.herokuapp.com) 
 
-### Despliegue  ECIHorariosApp 
+#### Despliegue  ECIHorariosApp 
 >[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://ecihorariosapp.herokuapp.com) 
 
-### Integración Continua con CircleCI
+#### Integración Continua con CircleCI
 >[![CircleCI](https://circleci.com/gh/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI.svg?style=svg)](https://app.circleci.com/pipelines/github/Software-Development-Industries/ECI-Horarios)
 >
 
-## Calidad del Codigo con Codacy
+#### Calidad del Codigo con Codacy
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b62c449e43f24a86803f524a67d373ea)](https://app.codacy.com/gh/Software-Development-Industries/ECI-Horarios/dashboard)
 
