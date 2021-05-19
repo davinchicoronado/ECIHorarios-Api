@@ -45,7 +45,11 @@ La plataforma esta planteada como una herramienta nueva para realizar horario, l
 ## **Arquitecura y Diseño**
 ### Casos de uso 
 ![](Img/Diagramas/casodeusoest.png)
-
+* Registrar Login 
+ Como estudiante quiero iniciar sesion en la plataforma para poder realizar diferentes operaciones referente a la inscripción de horarios.
+   
+* Registrar Asignatura 
+      -  asdasd
 
 
 
