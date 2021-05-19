@@ -26,7 +26,6 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software Devel
 La plataforma esta planteada como una herramienta nueva para realizar horario, la cual tendrá como plus la cual permitira comunicarse con el un administrador para que le tramite sus peticiones.
 
 
-![texto](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/menu%20principal%20eci%20horarios.png)
 
 ### Despliegue  ECIHorariosApi
 >[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://ecihorarios.herokuapp.com) 
