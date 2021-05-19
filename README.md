@@ -47,31 +47,31 @@ La plataforma esta planteada como una herramienta nueva para realizar horario, l
 ![](Img/Diagramas/casodeusoest.png) 
 
 #### Registrar Login 
-Como estudiante quiero iniciar sesion en la plataforma para poder realizar diferentes operaciones referente a la inscripción de horarios.
+* Como estudiante quiero iniciar sesion en la plataforma para poder realizar diferentes operaciones referente a la inscripción de horarios.
    
 #### Registrar Asignatura 
 
-Como estudiante quiero registrar una asignatura para poder verla en el actual semestre. 
+* Como estudiante quiero registrar una asignatura para poder verla en el actual semestre. 
 
-* Consultar las asignaturas disponibles para el estudiante. 
-* Agregar una asignatura . Restricciones : El estudiante no podrá inscribir asignaturas que no tengan cupos y no podrá exeder el número de creditos disponibles para  él.
-* Eliminar alguna asignatura inscrita.
+  - Consultar las asignaturas disponibles para el estudiante. 
+  - Agregar una asignatura . Restricciones : El estudiante no podrá inscribir asignaturas que no tengan cupos y no podrá exeder el número de creditos disponibles para        él.
+  - Eliminar alguna asignatura inscrita.
 
 #### Registrar mensaje 
-Como estudiante quiero enviar mensajes al admnistrador del area encargada para poder solucionar mis dudas o realizar solicitudes. 
+* Como estudiante quiero enviar mensajes al admnistrador del area encargada para poder solucionar mis dudas o realizar solicitudes. 
 
 ![](Img/Diagramas/casodeusoadmin.png)
 #### Registrar Login 
-Como administrador quiero iniciar sesión en la plataforma para poder responder las  diferentes solicitudes de los estudiantes referente a la inscripción de horarios. 
+* Como administrador quiero iniciar sesión en la plataforma para poder responder las  diferentes solicitudes de los estudiantes referente a la inscripción de horarios. 
 
 #### Registrar Login 
-Como administrador quiero consultar la información de un estudiante para poder realizar un debido proceso en cuanto a sus solicitudes.
+* Como administrador quiero consultar la información de un estudiante para poder realizar un debido proceso en cuanto a sus solicitudes.
 
 #### Registrar Asignatura 
-Como administrador quiero registrar una asignatura del estudiante para poder responder a su solicitud. 
+* Como administrador quiero registrar una asignatura del estudiante para poder responder a su solicitud. 
 
 #### Registrar Mensaje 
-Como administrador quiero enviar mensajes a los estudiantes para poder responder a sus solicitudes. 
+* Como administrador quiero enviar mensajes a los estudiantes para poder responder a sus solicitudes. 
 
 
 
