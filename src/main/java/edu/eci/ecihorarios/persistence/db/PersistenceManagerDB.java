@@ -37,31 +37,6 @@ public class PersistenceManagerDB implements PersistenceManager {
     DaoSubject daoSubject;
 
     @Override
-    public List<Subject> getAvailableSubjects(String username) throws PersistenceException {
-        
-       
-        List<Subject> list = new ArrayList<>();
-        User us = daoUser.getUserDetails(username);
-        List<String>approved = us.getApprovedSubjects();
-        Curriculum curl = daoSubject.getCurriculum(us.getCarrer()); 
-   
-        Subject sb;
-        String code;
-        for(NodeSubject nd : curl.getList()){ 
-            code = nd.getCode(); 
-            if(nd.getPrerequisites()!=null){
-                if(approved.containsAll(nd.getPrerequisites())){
-                    sb = daoSubject.getSubject(code);
-                    list.add(sb);
-                }
-            }
-        }
-        
-        
-        return list;
-    }
-
-    @Override
     public List<Group> getSchedule(String codeSubject) throws PersistenceException {
         return daoSubject.getGroups(codeSubject);
     }
@@ -69,16 +44,6 @@ public class PersistenceManagerDB implements PersistenceManager {
     @Override
     public User getUser(String username) throws PersistenceException {  
         return daoUser.getUserDetails(username);
-    }
-
-    @Override
-    public Curriculum getCurriculum(String carrer) throws PersistenceException {
-        return daoSubject.getCurriculum(carrer);
-    }
-
-    @Override
-    public Subject getSubject(String code) throws PersistenceException {
-        return daoSubject.getSubject(code);
     }
 
     @Override

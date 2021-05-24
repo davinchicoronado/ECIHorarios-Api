@@ -115,10 +115,6 @@ public class PersistenceManagerStub implements PersistenceManager{
     }
 
     
-    @Override
-    public List<Subject> getAvailableSubjects(String username)throws PersistenceException{
-        return availableSubject.get(username);
-    }
     
     @Override
     public List<Group> getSchedule(String nameSubject)throws PersistenceException{
@@ -135,15 +131,6 @@ public class PersistenceManagerStub implements PersistenceManager{
         System.out.println(schedule.toString());
     }
 
-    @Override
-    public Curriculum getCurriculum(String carrer) throws PersistenceException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Subject getSubject(String code) throws PersistenceException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
     public List<ScheduleStudent> getScheduleStudent(String username) throws PersistenceException {

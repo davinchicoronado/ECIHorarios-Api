@@ -30,7 +30,7 @@ public class CacheConfig implements CachingConfigurer {
     
     public final static String CACHE_SUBJECT = "cacheSubject"; 
     public final static String CACHE_CURRICULUM = "cacheCurriculum";
-    
+  
     @Bean
     @Override
     public CacheManager cacheManager() {
@@ -39,7 +39,7 @@ public class CacheConfig implements CachingConfigurer {
         
         GuavaCache cache1 = new GuavaCache(CACHE_SUBJECT, CacheBuilder.newBuilder().expireAfterWrite(30, TimeUnit.MINUTES).build());
         GuavaCache cache2 = new GuavaCache(CACHE_CURRICULUM, CacheBuilder.newBuilder().expireAfterWrite(30, TimeUnit.MINUTES).build());
-        
+   
         
         cacheManager.setCaches(Arrays.asList(cache1,cache2));
         

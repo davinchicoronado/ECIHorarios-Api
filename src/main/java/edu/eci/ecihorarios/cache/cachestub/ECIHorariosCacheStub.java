@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.ecihorarios.cachestub;
+package edu.eci.ecihorarios.cache.cachestub;
 import edu.eci.ecihorarios.model.bean.Subject;
 import java.time.LocalTime;
 import java.util.List;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
  * @author David Coronado
  */ 
 @Service
-public class ECIHorariosCache {
+public class ECIHorariosCacheStub {
     
     
     ConcurrentHashMap<String,LocalTime> loggedUsers = new ConcurrentHashMap<>();

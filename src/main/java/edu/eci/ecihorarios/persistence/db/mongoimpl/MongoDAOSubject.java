@@ -5,7 +5,6 @@
  */
 package edu.eci.ecihorarios.persistence.db.mongoimpl;
 
-import edu.eci.ecihorarios.config.CacheConfig;
 import edu.eci.ecihorarios.model.bean.CredentialsUser;
 import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Group;
@@ -18,7 +17,6 @@ import edu.eci.ecihorarios.persistence.db.DaoSubject;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -36,7 +34,6 @@ public class MongoDAOSubject implements DaoSubject {
     MongoOperations mongoTemplate;
 
     @Override
-    @Cacheable(CacheConfig.CACHE_CURRICULUM)
     public Curriculum getCurriculum(String carrer) throws PersistenceException {
         Query query = new Query();
 
@@ -53,7 +50,6 @@ public class MongoDAOSubject implements DaoSubject {
     }
 
     @Override
-    @Cacheable(CacheConfig.CACHE_SUBJECT)
     public Subject getSubject(String code) throws PersistenceException {
 
         Query query = new Query();
