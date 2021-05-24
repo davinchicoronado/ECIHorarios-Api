@@ -41,7 +41,8 @@ La plataforma esta planteada como una herramienta nueva para realizar horarios, 
 
 >[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b62c449e43f24a86803f524a67d373ea)](https://app.codacy.com/gh/Software-Development-Industries/ECI-Horarios/dashboard)
 
- 
+[link repositorio ECIHorariosApp](https://github.com/davinchicoronado/ECIHorarios-App)
+
 ## **Arquitecura y Diseño**
 ### Casos de uso  
 
