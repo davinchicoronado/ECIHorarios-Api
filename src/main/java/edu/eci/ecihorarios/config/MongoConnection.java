@@ -24,10 +24,12 @@ public class MongoConnection {
     @Autowired 
     private MongoClient mongoClient;
     
-
+    private final String urlMongoDb = "mongodb+srv://ProjectEciHorarios:admin123@clusterecihorarios.gdwta.mongodb.net/ECIHorarios?w=majority"; 
+    //private final String urlMongoDb = "mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb"; 
+        
     @Bean
     public MongoClient mongoClient() {
-        ConnectionString connString = new ConnectionString("mongodb+srv://ProjectEciHorarios:admin123@clusterecihorarios.gdwta.mongodb.net/ECIHorarios?w=majority");
+        ConnectionString connString = new ConnectionString(urlMongoDb);
         MongoClientSettings settings = MongoClientSettings.builder()
                 .applyConnectionString(connString)
                 .retryWrites(true)

@@ -11,7 +11,6 @@ import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.persistence.PersistenceException;
 import edu.eci.ecihorarios.persistence.db.DaoSubject;
-import edu.eci.ecihorarios.persistence.db.DaoUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -23,9 +22,7 @@ import org.springframework.stereotype.Service;
 @Service("ECIHorariosGuavaCache")
 public class ECIHorariosCacheImpl implements ECIHorariosCache{ 
     
-    @Autowired 
-    DaoUser daoUser; 
-    
+  
     @Autowired 
     DaoSubject daoSubject; 
 
