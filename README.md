@@ -78,7 +78,8 @@ La plataforma esta planteada como una herramienta nueva para realizar horarios, 
 #### Registrar Mensaje 
 * Como administrador quiero enviar mensajes a los estudiantes para poder responder a sus solicitudes. 
 
-
+### Diagrama de Clases
+![](Img/Diagramas/ClassDiagramECIHorarios.png)
 
 
 
