@@ -18,8 +18,7 @@ public interface ECIHorariosCache {
     
     
     public Curriculum getCurriculum(String carrer) throws PersistenceException;
-     
-    
+
     public Subject getSubject(String code) throws PersistenceException; 
     
 }
