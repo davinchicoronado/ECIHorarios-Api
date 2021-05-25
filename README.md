@@ -95,8 +95,24 @@ Luego de loguearnos como estudiante obtendremos el siguiente menú con algunas o
 
 ![](Img/menuestudiante.png) 
 
-Si damos en la opción "Inscribir" se nos habilitara la siguiente vista en la cual podremos ver en el cuadro resaltado en verde las asignaturas disponibles del estudiante luego si damos doble clic en alguna de estas celdas se podrán ver los horarios disponibles al cual podremos inscribir con el botón "Enroll".  
+Si damos en la opción "Inscribir" se nos habilitará la siguiente vista en la cual podremos ver en el cuadro resaltado en verde las asignaturas disponibles del estudiante luego si damos doble clic en alguna de estas celdas se podrán ver los horarios disponibles al cual podremos inscribir con el botón "Enroll".  
 
 ![](Img/inscribirestudiante.png)
+
+Siguiendo con el estudiante si damos en la opción "Tu Horario" podremos ver las asignaturas que el estudiante ha inscrito hasta el momento .  Así como también tendrá la opción de eliminar la asignatura inscrita.  
+![](Img/horarioestudiante.png) 
+
+Si nos logueamos como administrador obtendremos el siguiente menú.
+
+![](Img/menuadmin.png)  
+
+Para cualquier de los otros roles si damos en la opción de "Chat" se habilitara una vista en la cual podremos enviar mensajes al otro rol. 
+
+![](Img/chat.png)  
+
+
+
+
+
 
        
