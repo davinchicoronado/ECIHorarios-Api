@@ -81,7 +81,8 @@ La plataforma esta planteada como una herramienta nueva para realizar horarios, 
 ### Diagrama de Clases
 ![](Img/Diagramas/ClassDiagramECIHorarios.png)
 
-
+### Diagrama de Componentes 
+![](Img/Diagramas/ComponentDiagramECIHorarios.png)
 
 
        
