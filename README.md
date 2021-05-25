@@ -84,5 +84,9 @@ La plataforma esta planteada como una herramienta nueva para realizar horarios, 
 ### Diagrama de Componentes 
 ![](Img/Diagramas/ComponentDiagramECIHorarios.png)
 
+## Instrucciones Básicas de Uso 
+Como primera instancia tenemos el login para poder ingresar a la plataforma, y antes de empezar es valioso recordar que hay dos tipos de roles el Administrador que es dado por distintas Decanaturas de la Escuela, y como función tienen responder a todas las solicitudes por parte del estudiante al momento de realizar sus horarios, y tenemos al estudiante que es el que tiene permitido inscribir las asignaturas en el actual semestre. Por tanto las vistas para los distintos roles varían. 
+
+
 
        
