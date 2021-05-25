@@ -95,5 +95,8 @@ Luego de loguearnos como estudiante obtendremos el siguiente menú con algunas o
 
 ![](Img/menuestudiante.png) 
 
+Si damos en la opción "Inscribir" se nos habilitara la siguiente vista en la cual podremos ver en el cuadro resaltado en verde las asignaturas disponibles del estudiante luego si damos doble clic en alguna de estas celdas se podrán ver los horarios disponibles al cual podremos inscribir con el botón "Enroll".  
+
+![](Img/inscribirestudiante.png)
 
        
