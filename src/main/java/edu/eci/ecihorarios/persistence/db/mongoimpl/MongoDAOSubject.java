@@ -125,7 +125,7 @@ public class MongoDAOSubject implements DaoSubject {
     }
 
     @Override
-    public void enrollSubject(SubjectStudent ss, String username) throws PersistenceException {
+    public void enrollSubject(SubjectStudent subStudent, String username) throws PersistenceException {
         Query query = new Query();
         query.addCriteria(Criteria.where("_id").is(username));
 
@@ -139,8 +139,8 @@ public class MongoDAOSubject implements DaoSubject {
         query3.fields().include("numGroup");
         query3.fields().include("lessons");
         query3.fields().include("limit");
-        query3.addCriteria(Criteria.where("code").is(ss.getSubjectid()));
-        query3.addCriteria(Criteria.where("numGroup").is(ss.getGroup()));
+        query3.addCriteria(Criteria.where("code").is(subStudent.getSubjectid()));
+        query3.addCriteria(Criteria.where("numGroup").is(subStudent.getGroup()));
 
         Group gr = mongoTemplate.findOne(query3, Group.class);
 
@@ -154,13 +154,13 @@ public class MongoDAOSubject implements DaoSubject {
             query2.addCriteria(Criteria.where("_id").is(username));
 
             List<SubjectStudent> enrolled = new ArrayList<>();
-            enrolled.add(ss);
+            enrolled.add(subStudent);
 
             Update update = new Update();
 
             update.set("enrolled_subjects", enrolled);
 
-            update.set("limitCredits", user.getLimitCredits() - getSubject(ss.getSubjectid()).getCredits());
+            update.set("limitCredits", user.getLimitCredits() - getSubject(subStudent.getSubjectid()).getCredits());
 
             mongoTemplate.updateFirst(query2, update, User.class);
 
@@ -174,14 +174,14 @@ public class MongoDAOSubject implements DaoSubject {
 
             List<SubjectStudent> enrolled = user.getEnrolledsubject();
 
-            if (enrolled.contains(ss)) {
+            if (enrolled.contains(subStudent)) {
                 throw new PersistenceException("Materia ya inscrita");
             }
 
-            enrolled.add(ss);
+            enrolled.add(subStudent);
             Update update = new Update();
             update.set("enrolled_subjects", enrolled);
-            update.set("limitCredits", user.getLimitCredits() - getSubject(ss.getSubjectid()).getCredits());
+            update.set("limitCredits", user.getLimitCredits() - getSubject(subStudent.getSubjectid()).getCredits());
             mongoTemplate.updateFirst(query2, update, User.class);
 
             Update update2 = new Update();
@@ -193,7 +193,7 @@ public class MongoDAOSubject implements DaoSubject {
     }
 
     @Override
-    public void deleteSubject(SubjectStudent ss, String username) throws PersistenceException {
+    public void deleteSubject(SubjectStudent subStudent, String username) throws PersistenceException {
         Query query = new Query();
         query.addCriteria(Criteria.where("_id").is(username));
 
@@ -207,8 +207,8 @@ public class MongoDAOSubject implements DaoSubject {
         query3.fields().include("numGroup");
         query3.fields().include("lessons");
         query3.fields().include("limit");
-        query3.addCriteria(Criteria.where("code").is(ss.getSubjectid()));
-        query3.addCriteria(Criteria.where("numGroup").is(ss.getGroup()));
+        query3.addCriteria(Criteria.where("code").is(subStudent.getSubjectid()));
+        query3.addCriteria(Criteria.where("numGroup").is(subStudent.getGroup()));
 
         Group gr = mongoTemplate.findOne(query3, Group.class);
 
@@ -222,8 +222,8 @@ public class MongoDAOSubject implements DaoSubject {
 
             List<SubjectStudent> enrolled = user.getEnrolledsubject();
 
-            if (enrolled.contains(ss)) { 
-                enrolled.remove(ss);
+            if (enrolled.contains(subStudent)) { 
+                enrolled.remove(subStudent);
               
             } 
             else{
@@ -233,7 +233,7 @@ public class MongoDAOSubject implements DaoSubject {
             
             Update update = new Update();
             update.set("enrolled_subjects", enrolled);
-            update.set("limitCredits", user.getLimitCredits() + getSubject(ss.getSubjectid()).getCredits());
+            update.set("limitCredits", user.getLimitCredits() + getSubject(subStudent.getSubjectid()).getCredits());
             mongoTemplate.updateFirst(query2, update, User.class);
 
             Update update2 = new Update();
@@ -245,7 +245,7 @@ public class MongoDAOSubject implements DaoSubject {
     }
 
     @Override
-    public void enrollSubjectStudent(SubjectStudent ss, String username) throws PersistenceException {
+    public void enrollSubjectStudent(SubjectStudent subStudent, String username) throws PersistenceException {
         Query query = new Query();
         query.addCriteria(Criteria.where("_id").is(username));
 
@@ -259,8 +259,8 @@ public class MongoDAOSubject implements DaoSubject {
         query3.fields().include("numGroup");
         query3.fields().include("lessons");
         query3.fields().include("limit");
-        query3.addCriteria(Criteria.where("code").is(ss.getSubjectid()));
-        query3.addCriteria(Criteria.where("numGroup").is(ss.getGroup()));
+        query3.addCriteria(Criteria.where("code").is(subStudent.getSubjectid()));
+        query3.addCriteria(Criteria.where("numGroup").is(subStudent.getGroup()));
 
         Group gr = mongoTemplate.findOne(query3, Group.class);
 
@@ -271,13 +271,13 @@ public class MongoDAOSubject implements DaoSubject {
             query2.addCriteria(Criteria.where("_id").is(username));
 
             List<SubjectStudent> enrolled = new ArrayList<>();
-            enrolled.add(ss);
+            enrolled.add(subStudent);
 
             Update update = new Update();
 
             update.set("enrolled_subjects", enrolled);
 
-            update.set("limitCredits", user.getLimitCredits() - getSubject(ss.getSubjectid()).getCredits());
+            update.set("limitCredits", user.getLimitCredits() - getSubject(subStudent.getSubjectid()).getCredits());
 
             mongoTemplate.updateFirst(query2, update, User.class);
 
@@ -291,14 +291,14 @@ public class MongoDAOSubject implements DaoSubject {
 
             List<SubjectStudent> enrolled = user.getEnrolledsubject();
 
-            if (enrolled.contains(ss)) {
+            if (enrolled.contains(subStudent)) {
                 throw new PersistenceException("Materia ya inscrita");
             }
 
-            enrolled.add(ss);
+            enrolled.add(subStudent);
             Update update = new Update();
             update.set("enrolled_subjects", enrolled);
-            update.set("limitCredits", user.getLimitCredits() - getSubject(ss.getSubjectid()).getCredits());
+            update.set("limitCredits", user.getLimitCredits() - getSubject(subStudent.getSubjectid()).getCredits());
             mongoTemplate.updateFirst(query2, update, User.class);
 
             Update update2 = new Update();

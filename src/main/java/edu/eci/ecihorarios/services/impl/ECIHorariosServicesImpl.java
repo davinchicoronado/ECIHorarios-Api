@@ -145,22 +145,22 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices {
     }
 
     @Override
-    public void deleteSubject(SubjectStudent ss, String username) throws ServicesException {
+    public void deleteSubject(SubjectStudent subStudent, String username) throws ServicesException {
         try {
-            pms.deleteSubject(ss, username);
+            pms.deleteSubject(subStudent, username);
         } catch (PersistenceException ex) {
             Logger.getLogger(ECIHorariosServicesImpl.class.getName()).log(Level.SEVERE, null, ex);
-            throw new ServicesException("No se pudo  la asignatura: " + ss.getSubjectid(), ex);
+            throw new ServicesException("No se pudo  la asignatura: " + subStudent.getSubjectid(), ex);
         }
     }
 
     @Override
-    public void enrollSubjectStudent(SubjectStudent ss, String username) throws ServicesException {
+    public void enrollSubjectStudent(SubjectStudent subStudent, String username) throws ServicesException {
         try {
-            pms.enrollSubjectStudent(ss, username);
+            pms.enrollSubjectStudent(subStudent, username);
         } catch (PersistenceException ex) {
             Logger.getLogger(ECIHorariosServicesImpl.class.getName()).log(Level.SEVERE, null, ex);
-            throw new ServicesException("No se pudo inscribir la asignatura: " + ss.getSubjectid(), ex);
+            throw new ServicesException("No se pudo inscribir la asignatura: " + subStudent.getSubjectid(), ex);
         }
     }
 

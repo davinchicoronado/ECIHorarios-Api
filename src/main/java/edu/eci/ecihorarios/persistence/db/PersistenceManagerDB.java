@@ -5,16 +5,12 @@
  */
 package edu.eci.ecihorarios.persistence.db;
 
-import edu.eci.ecihorarios.model.bean.Curriculum;
 import edu.eci.ecihorarios.model.bean.Group;
-import edu.eci.ecihorarios.model.bean.NodeSubject;
 import edu.eci.ecihorarios.model.bean.ScheduleStudent;
-import edu.eci.ecihorarios.model.bean.Subject;
 import edu.eci.ecihorarios.model.bean.SubjectStudent;
 import edu.eci.ecihorarios.model.bean.User;
 import edu.eci.ecihorarios.persistence.PersistenceException;
 import edu.eci.ecihorarios.persistence.PersistenceManager;
-import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -47,8 +43,8 @@ public class PersistenceManagerDB implements PersistenceManager {
     }
 
     @Override
-    public void saveScheduleStudent(List<SubjectStudent> ss, String username) throws PersistenceException {
-        daoSubject.saveScheduleStudent(ss, username);
+    public void saveScheduleStudent(List<SubjectStudent> subStudent, String username) throws PersistenceException {
+        daoSubject.saveScheduleStudent(subStudent, username);
     }
 
     @Override
@@ -57,18 +53,18 @@ public class PersistenceManagerDB implements PersistenceManager {
     }
 
     @Override
-    public void enrollSubject(SubjectStudent ss, String username) throws PersistenceException {
-        daoSubject.enrollSubject(ss, username);
+    public void enrollSubject(SubjectStudent subStudent, String username) throws PersistenceException {
+        daoSubject.enrollSubject(subStudent, username);
     }
 
     @Override
-    public void deleteSubject(SubjectStudent ss, String username) throws PersistenceException {
-        daoSubject.deleteSubject(ss,username);
+    public void deleteSubject(SubjectStudent subStudent, String username) throws PersistenceException {
+        daoSubject.deleteSubject(subStudent,username);
     }
 
     @Override
-    public void enrollSubjectStudent(SubjectStudent ss, String username) throws PersistenceException {
-        daoSubject.enrollSubjectStudent(ss, username);
+    public void enrollSubjectStudent(SubjectStudent subStudent, String username) throws PersistenceException {
+        daoSubject.enrollSubjectStudent(subStudent, username);
     }
     
 
