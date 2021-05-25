@@ -13,7 +13,7 @@ db.createCollection("Schedules")
 -----------------------PoblarOk------------------------------- 
 ----------------------CredentialsUser------------------------- 
 
-db.Credentials.insert({ "_id" : "apiclient", "password" : "$2a$10$.ISvQ72rmbp2q4NaSbbLnOY8rOT1/eqVOaLYDmyXfKHhSwhcMmCNq", "role" : "ADMIN", "_class" : "edu.eci.ecihorarios.model.bean.CredentialsUser" })  
+db.Credentials.insert({ "_id" : "gerardo.sanchez", "password" : "$2a$10$.ISvQ72rmbp2q4NaSbbLnOY8rOT1/eqVOaLYDmyXfKHhSwhcMmCNq", "role" : "ADMIN", "_class" : "edu.eci.ecihorarios.model.bean.CredentialsUser" })  
 
 db.Credentials.insert({ "_id" : "david.coronado", "password" : "$2a$10$KzqaOYRc2Eu584/705MGXuxURGaYpAO7FA8E8xbLI1jHTCJjeSdVK", "role" : "USER", "_class" : "edu.eci.ecihorarios.model.bean.CredentialsUser" })  
 
@@ -21,7 +21,7 @@ db.Credentials.insert({ "_id" : "david.coronado", "password" : "$2a$10$KzqaOYRc2
 
 db.Users.insert({ "_id" : "david.coronado", "identification" : "1234567", "tipo" : "E", "email" : "david.coronado@mail.escuelaing.edu.co", "semester" : 2, "limitCredits" : 18, "name" : "David Leonardo Coronado", "approvedSubjects" : [ "PREM", "AGEO", "FUME", "INSI", "ELBA", "FCO1" ], "_class" : "edu.eci.ecihorarios.model.bean.User","carrer" : "Ingenieria de Sistemas", "enrolled_subjects":[] })
 
-db.Users.insert({ "_id" : "apiclient", "identification" : "1234567", "tipo" : "A", "email" : "gerardo.sanchez@mail.escuelaing.edu.co", "name" : "Gerardo Sanchez", "carrer" : "Ingenieria de Sistemas", "_class" : "edu.eci.ecihorarios.model.bean.User" }) 
+db.Users.insert({ "_id" : "gerardo.sanchez", "identification" : "1234567", "tipo" : "A", "email" : "gerardo.sanchez@mail.escuelaing.edu.co", "name" : "Gerardo Sanchez", "carrer" : "Ingenieria de Sistemas", "_class" : "edu.eci.ecihorarios.model.bean.User" }) 
 
 
 -----------------------------DetailsSubjects---------------------------- 
