@@ -112,7 +112,9 @@ Para cualquier de los otros roles si damos en la opción de "Chat" se habilitara
 
 Siguiendo con el administrador si damos en la opción "Inscribir"  podremos ver que hay un formuario en el cual podremos consultar información del estudiante como poder ver las asignaturas disponibles y poder inscribirlas al estudiante.
 
+![](Img/inscribiradmin.png)  
 
+Finalmente tenemos la opción salir en la cual nos devolverá al login.
 
 
        
