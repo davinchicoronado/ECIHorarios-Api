@@ -150,7 +150,7 @@ public class ECIHorariosServicesImpl implements ECIHorariosServices {
             pms.deleteSubject(subStudent, username);
         } catch (PersistenceException ex) {
             Logger.getLogger(ECIHorariosServicesImpl.class.getName()).log(Level.SEVERE, null, ex);
-            throw new ServicesException("No se pudo  la asignatura: " + subStudent.getSubjectid(), ex);
+            throw new ServicesException("No se pudo eliminar la asignatura: " + subStudent.getSubjectid(), ex);
         }
     }
 
