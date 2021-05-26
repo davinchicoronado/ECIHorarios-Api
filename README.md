@@ -84,5 +84,37 @@ La plataforma esta planteada como una herramienta nueva para realizar horarios, 
 ### Diagrama de Componentes 
 ![](Img/Diagramas/ComponentDiagramECIHorarios.png)
 
+## Instrucciones Básicas de Uso 
+Como primera instancia tenemos el login para poder ingresar a la plataforma, y antes de empezar es valioso recordar que hay dos tipos de roles el Administrador que es dado por distintas decanaturas de la Escuela, y como función tienen responder a todas las solicitudes por parte del estudiante al momento de realizar sus horarios, y tenemos al estudiante que es el que tiene permitido inscribir las asignaturas en el actual semestre. Por tanto las vistas para los distintos roles varían. 
+
+ <p align="center">
+    <img src="https://github.com/davinchicoronado/proyect/blob/logicalLayer/Img/login.png?raw=true" alt="Sublime's custom image"/>
+  </p>
+
+Luego de loguearnos como estudiante obtendremos el siguiente menú con algunas opciones.  
+
+![](Img/menuestudiante.png) 
+
+Si damos en la opción "Inscribir" se nos habilitará la siguiente vista en la cual podremos ver en el cuadro resaltado en verde las asignaturas disponibles del estudiante luego si damos doble clic en alguna de estas celdas se podrán ver los horarios disponibles al cual podremos inscribir con el botón "Enroll".  
+
+![](Img/inscribirestudiante.png)
+
+Siguiendo con el estudiante si damos en la opción "Tu Horario" podremos ver las asignaturas que el estudiante ha inscrito hasta el momento .  Así como también tendrá la opción de eliminar la asignatura inscrita.  
+![](Img/horarioestudiante.png) 
+
+Si nos logueamos como administrador obtendremos el siguiente menú.
+
+![](Img/menuadmin.png)  
+
+Para cualquier de los otros roles si damos en la opción de "Chat" se habilitara una vista en la cual podremos enviar mensajes al otro rol. 
+
+![](Img/chat.png)  
+
+Siguiendo con el administrador si damos en la opción "Inscribir"  podremos ver que hay un formuario en el cual podremos consultar información del estudiante como poder ver las asignaturas disponibles y poder inscribirlas al estudiante.
+
+![](Img/inscribiradmin.png)  
+
+Finalmente tenemos la opción salir en la cual nos devolverá al login.
+
 
        
