@@ -43,8 +43,8 @@ public class ECIHorariosAPIController {
             Logger.getLogger(ECIHorariosAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(new ObjectError(ex.getMessage()), HttpStatus.NOT_FOUND);
         }
-    }
-
+    } 
+    
     @RequestMapping(path = "/curriculum/{name}", method = RequestMethod.GET)
     public ResponseEntity<?> getCurriculum(@PathVariable("name") String name) {
 

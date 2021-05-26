@@ -39,14 +39,9 @@ public class OAuth2AuthorizationServer extends AuthorizationServerConfigurerAdap
     private TokenStore tokenStore; 
 
     
-    
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        security.tokenKeyAccess("permitAll()")
-                .checkTokenAccess("isAuthenticated()");  
-        
-    
-        
+  
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		CorsConfiguration config = new CorsConfiguration();
 		config.setAllowCredentials(true);
