@@ -36,13 +36,13 @@ La plataforma esta planteada como una herramienta nueva para realizar horarios, 
 #### Integración Continua con CircleCI
 >[![CircleCI](https://circleci.com/gh/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI.svg?style=svg)](https://app.circleci.com/pipelines/github/davinchicoronado/proyect)
 
-[link repositorio App](https://github.com/davinchicoronado/ECIHorarios-App)
+
 
 #### Calidad del Codigo con Codacy
 
 >[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b62c449e43f24a86803f524a67d373ea)](https://app.codacy.com/gh/Software-Development-Industries/ECI-Horarios/dashboard)
 
-
+[link repositorio App](https://github.com/davinchicoronado/ECIHorarios-App)
 
 ## **Arquitecura y Diseño**
 ### Casos de uso  
