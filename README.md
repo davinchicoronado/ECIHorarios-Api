@@ -37,11 +37,12 @@ La plataforma esta planteada como una herramienta nueva para realizar horarios, 
 >[![CircleCI](https://circleci.com/gh/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI.svg?style=svg)](https://app.circleci.com/pipelines/github/davinchicoronado/proyect)
 
 
+
 #### Calidad del Codigo con Codacy
 
 >[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b62c449e43f24a86803f524a67d373ea)](https://app.codacy.com/gh/Software-Development-Industries/ECI-Horarios/dashboard)
 
-
+[link repositorio App](https://github.com/davinchicoronado/ECIHorarios-App)
 
 ## **Arquitecura y Diseño**
 ### Casos de uso  
@@ -86,6 +87,9 @@ La plataforma esta planteada como una herramienta nueva para realizar horarios, 
 
 ### Diagrama de Despliegue 
 ![](Img/Diagramas/DeploymentDiagramECIHorarios.png) 
+
+### Diagrama de Entidad Relación
+No aplica
 
 ## Instrucciones Básicas de Uso 
 Como primera instancia tenemos el login para poder ingresar a la plataforma, y antes de empezar es valioso recordar que hay dos tipos de roles el Administrador que es dado por distintas decanaturas de la Escuela, y como función tienen responder a todas las solicitudes por parte del estudiante al momento de realizar sus horarios, y tenemos al estudiante que es el que tiene permitido inscribir las asignaturas en el actual semestre. Por tanto las vistas para los distintos roles varían. 
