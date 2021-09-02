@@ -17,6 +17,7 @@ import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.cache.support.SimpleCacheManager;
 import org.springframework.context.annotation.Configuration; 
 import org.springframework.cache.guava.GuavaCache;
+import org.springframework.cache.guava.GuavaCacheManager;
 import org.springframework.cache.interceptor.SimpleKeyGenerator;
 import org.springframework.context.annotation.Bean;
 
@@ -39,8 +40,7 @@ public class CacheConfig implements CachingConfigurer {
         
         GuavaCache cache1 = new GuavaCache(CACHE_SUBJECT, CacheBuilder.newBuilder().expireAfterWrite(30, TimeUnit.MINUTES).build());
         GuavaCache cache2 = new GuavaCache(CACHE_CURRICULUM, CacheBuilder.newBuilder().expireAfterWrite(30, TimeUnit.MINUTES).build());
-   
-        
+      
         cacheManager.setCaches(Arrays.asList(cache1,cache2));
         
         return cacheManager;
